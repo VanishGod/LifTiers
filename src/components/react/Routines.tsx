@@ -7,11 +7,12 @@ import { AllExercises } from './AllExercises';
 import { RoutineView } from './RoutineView';
 import { RoutinesList } from './RoutinesList';
 import { ExerciseDetailsModal } from './ExerciseDetailsModal';
+import  AlertsToast  from './AlertsToast';
 import { type Exercise, type ExerciseInRoutine, type Unit } from '../../types/exercises.types';
 import exercises from '../../exercises.json';
 
 interface RoutinesProps {
-  onNavigateToWorkout?: () => void; // ✅ Nuevo prop
+  onNavigateToWorkout?: () => void;
 }
 
 export const Routines = ({ onNavigateToWorkout }: RoutinesProps) => {
@@ -20,6 +21,13 @@ export const Routines = ({ onNavigateToWorkout }: RoutinesProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCreatingRoutine, setIsCreatingRoutine] = useState(false);
   const [newRoutineName, setNewRoutineName] = useState('');
+
+  // ✅ Estado para el Toast
+  const [toast, setToast] = useState<{
+    message: string;
+    color: 'success' | 'error' | 'warning' | 'info' | 'default';
+    duration?: number;
+  } | null>(null);
 
   // Stores
   const {
@@ -37,14 +45,17 @@ export const Routines = ({ onNavigateToWorkout }: RoutinesProps) => {
 
   const { unit: weightUnit, toggleUnit } = useWeightStore();
 
-  // ✅ Workout store para iniciar entrenamientos
   const { createWorkout, addExerciseToWorkout } = useWorkoutStore();
 
   // ============ MANEJADORES ============
   
   const handleAddExercise = (exercise: Exercise) => {
     if (!activeRoutine) {
-      alert('Primero selecciona o crea una rutina');
+      setToast({
+        message: 'Primero selecciona o crea una rutina',
+        color: 'warning',
+        duration: 3500,
+      });
       return;
     }
 
@@ -53,7 +64,11 @@ export const Routines = ({ onNavigateToWorkout }: RoutinesProps) => {
     );
 
     if (exists) {
-      alert('Este ejercicio ya está en la rutina');
+      setToast({
+        message: 'Este ejercicio ya está en la rutina',
+        color: 'error',
+        duration: 3000,
+      });
       return;
     }
 
@@ -71,6 +86,12 @@ export const Routines = ({ onNavigateToWorkout }: RoutinesProps) => {
       }],
       notes: '',
     });
+
+    setToast({
+      message: `"${exercise.name}" agregado a la rutina`,
+      color: 'success',
+      duration: 2500,
+    });
   };
 
   const handleViewDetails = (exerciseId: string) => {
@@ -86,12 +107,23 @@ export const Routines = ({ onNavigateToWorkout }: RoutinesProps) => {
       addRoutine(newRoutineName.trim());
       setNewRoutineName('');
       setIsCreatingRoutine(false);
+      setToast({
+        message: `Rutina "${newRoutineName.trim()}" creada exitosamente`,
+        color: 'success',
+        duration: 3000,
+      });
     }
   };
 
   const handleDeleteRoutine = (id: string) => {
-    if (window.confirm('¿Estás seguro de que quieres eliminar esta rutina?')) {
+    const routine = routines.find((r) => r.id === id);
+    if (window.confirm(`¿Estás seguro de que quieres eliminar "${routine?.name}"?`)) {
       deleteRoutine(id);
+      setToast({
+        message: `Rutina "${routine?.name}" eliminada`,
+        color: 'info',
+        duration: 3000,
+      });
     }
   };
 
@@ -105,16 +137,23 @@ export const Routines = ({ onNavigateToWorkout }: RoutinesProps) => {
     }
   };
 
-  // ✅ NUEVO: Iniciar entrenamiento desde una rutina
   const handleStartWorkout = (routineId: string) => {
     const routine = routines.find((r) => r.id === routineId);
     if (!routine) {
-      alert('No se encontró la rutina');
+      setToast({
+        message: 'No se encontró la rutina',
+        color: 'error',
+        duration: 3000,
+      });
       return;
     }
 
     if (routine.exercises.length === 0) {
-      alert('Esta rutina no tiene ejercicios. Agrega algunos primero.');
+      setToast({
+        message: 'Esta rutina no tiene ejercicios. Agrega algunos primero.',
+        color: 'warning',
+        duration: 3500,
+      });
       return;
     }
 
@@ -140,8 +179,12 @@ export const Routines = ({ onNavigateToWorkout }: RoutinesProps) => {
     if (onNavigateToWorkout) {
       onNavigateToWorkout();
     } else {
-      // Fallback: mostrar mensaje si no hay navegación
-      alert(`¡Entrenamiento "${routine.name}" iniciado! 🏋️\n\nCambia a la pestaña "Entrenar" para continuar.`);
+      // Fallback: mostrar toast si no hay navegación
+      setToast({
+        message: `¡Entrenamiento "${routine.name}" iniciado! 🏋️`,
+        color: 'success',
+        duration: 4000,
+      });
     }
   };
 
@@ -387,6 +430,15 @@ export const Routines = ({ onNavigateToWorkout }: RoutinesProps) => {
             setSelectedExercise(null);
           }}
         />
+        
+        {toast && (
+          <AlertsToast
+            message={toast.message}
+            duration={toast.duration || 3000}
+            color={toast.color}
+            onClose={() => setToast(null)}
+          />
+        )}
       </div>
     </div>
   );

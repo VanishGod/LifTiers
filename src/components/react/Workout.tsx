@@ -9,6 +9,7 @@ import { WorkoutInProgress } from './WorkoutInProgress';
 import { WorkoutHistory } from './WorkoutHistory';
 import { WorkoutReportModal } from './WorkoutReportModal'
 import { type WorkoutReport } from '../../types/exercises.types';
+import AlertsToast from './AlertsToast';
 
 export const Workout = () => {
   // ============ ESTADOS ============
@@ -80,7 +81,11 @@ export const Workout = () => {
       (set) => set.exerciseId === exercise.id
     );
     if (exists) {
-      alert('Este ejercicio ya está en el entrenamiento');
+     <AlertsToast
+     message='Este ejercicio ya está en el entrenamiento'
+     duration={3000}
+     color='warning'
+     />
       return;
     }
 

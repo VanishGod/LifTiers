@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { type ExerciseInRoutine, type ExerciseSet, type Unit } from '../../types/exercises.types';
 import { ExerciseSetCard } from './ExerciseSetCard';
+import AlertsToast from './AlertsToast';
 
 interface RoutineExerciseCardProps {
   exercise: ExerciseInRoutine;
@@ -44,7 +45,11 @@ export const RoutineExerciseCard = ({
   // Eliminar una serie
   const removeSet = (setIndex: number) => {
     if (exercise.sets.length <= 1) {
-      alert('Debe haber al menos una serie');
+    <AlertsToast
+      message='Debes agregar al menos un ejercicio'
+      duration={3000}
+      color='error'
+      />
       return;
     }
     const newSets = exercise.sets.filter((_, index) => index !== setIndex);

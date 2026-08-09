@@ -1,0 +1,3382 @@
+[
+  {
+    "id": "food_001",
+    "name": "Manzana",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 52,
+        "protein": 0.26,
+        "carbs": 13.81,
+        "fat": 0.17,
+        "fiber": 2.4,
+        "sugar": 10.39
+      },
+      "perServing": {
+        "calories": 78,
+        "protein": 0.39,
+        "carbs": 20.72,
+        "fat": 0.26,
+        "fiber": 3.6,
+        "sugar": 15.59,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_002",
+    "name": "Plátano",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 89,
+        "protein": 1.09,
+        "carbs": 22.84,
+        "fat": 0.33,
+        "fiber": 2.6,
+        "sugar": 12.23
+      },
+      "perServing": {
+        "calories": 118,
+        "protein": 1.45,
+        "carbs": 30.38,
+        "fat": 0.44,
+        "fiber": 3.46,
+        "sugar": 16.27,
+        "servingSize": 120,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_003",
+    "name": "Naranja",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 47,
+        "protein": 0.94,
+        "carbs": 11.75,
+        "fat": 0.12,
+        "fiber": 2.4,
+        "sugar": 9.35
+      },
+      "perServing": {
+        "calories": 70,
+        "protein": 1.41,
+        "carbs": 17.63,
+        "fat": 0.18,
+        "fiber": 3.6,
+        "sugar": 14.03,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_004",
+    "name": "Pera",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 57,
+        "protein": 0.36,
+        "carbs": 15.23,
+        "fat": 0.14,
+        "fiber": 3.1,
+        "sugar": 9.8
+      },
+      "perServing": {
+        "calories": 85,
+        "protein": 0.54,
+        "carbs": 22.85,
+        "fat": 0.21,
+        "fiber": 4.65,
+        "sugar": 14.7,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_005",
+    "name": "Fresa",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 32,
+        "protein": 0.67,
+        "carbs": 7.68,
+        "fat": 0.3,
+        "fiber": 2.0,
+        "sugar": 4.89
+      },
+      "perServing": {
+        "calories": 48,
+        "protein": 1.01,
+        "carbs": 11.52,
+        "fat": 0.45,
+        "fiber": 3.0,
+        "sugar": 7.34,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_006",
+    "name": "Kiwi",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 61,
+        "protein": 1.14,
+        "carbs": 14.66,
+        "fat": 0.52,
+        "fiber": 3.0,
+        "sugar": 8.99
+      },
+      "perServing": {
+        "calories": 73,
+        "protein": 1.37,
+        "carbs": 17.59,
+        "fat": 0.62,
+        "fiber": 3.6,
+        "sugar": 10.79,
+        "servingSize": 120,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_007",
+    "name": "Uva",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 69,
+        "protein": 0.72,
+        "carbs": 18.1,
+        "fat": 0.16,
+        "fiber": 0.9,
+        "sugar": 15.48
+      },
+      "perServing": {
+        "calories": 103,
+        "protein": 1.08,
+        "carbs": 27.15,
+        "fat": 0.24,
+        "fiber": 1.35,
+        "sugar": 23.22,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_008",
+    "name": "Melocotón",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 39,
+        "protein": 0.91,
+        "carbs": 9.54,
+        "fat": 0.25,
+        "fiber": 1.5,
+        "sugar": 8.39
+      },
+      "perServing": {
+        "calories": 58,
+        "protein": 1.37,
+        "carbs": 14.31,
+        "fat": 0.38,
+        "fiber": 2.25,
+        "sugar": 12.59,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_009",
+    "name": "Piña",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 50,
+        "protein": 0.54,
+        "carbs": 13.12,
+        "fat": 0.12,
+        "fiber": 1.4,
+        "sugar": 9.85
+      },
+      "perServing": {
+        "calories": 75,
+        "protein": 0.81,
+        "carbs": 19.68,
+        "fat": 0.18,
+        "fiber": 2.1,
+        "sugar": 14.78,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_010",
+    "name": "Sandía",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 30,
+        "protein": 0.61,
+        "carbs": 7.55,
+        "fat": 0.15,
+        "fiber": 0.4,
+        "sugar": 6.2
+      },
+      "perServing": {
+        "calories": 45,
+        "protein": 0.92,
+        "carbs": 11.33,
+        "fat": 0.23,
+        "fiber": 0.6,
+        "sugar": 9.3,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_011",
+    "name": "Mango",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 60,
+        "protein": 0.82,
+        "carbs": 14.98,
+        "fat": 0.38,
+        "fiber": 1.6,
+        "sugar": 13.66
+      },
+      "perServing": {
+        "calories": 90,
+        "protein": 1.23,
+        "carbs": 22.47,
+        "fat": 0.57,
+        "fiber": 2.4,
+        "sugar": 20.49,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_012",
+    "name": "Aguacate",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 160,
+        "protein": 2.0,
+        "carbs": 8.53,
+        "fat": 14.66,
+        "fiber": 6.7,
+        "sugar": 0.66
+      },
+      "perServing": {
+        "calories": 240,
+        "protein": 3.0,
+        "carbs": 12.8,
+        "fat": 21.99,
+        "fiber": 10.05,
+        "sugar": 0.99,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_013",
+    "name": "Limón",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 29,
+        "protein": 1.1,
+        "carbs": 9.32,
+        "fat": 0.3,
+        "fiber": 2.8,
+        "sugar": 2.5
+      },
+      "perServing": {
+        "calories": 43,
+        "protein": 1.65,
+        "carbs": 13.98,
+        "fat": 0.45,
+        "fiber": 4.2,
+        "sugar": 3.75,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_014",
+    "name": "Pomelo",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 42,
+        "protein": 0.77,
+        "carbs": 10.66,
+        "fat": 0.14,
+        "fiber": 1.6,
+        "sugar": 6.89
+      },
+      "perServing": {
+        "calories": 63,
+        "protein": 1.16,
+        "carbs": 15.99,
+        "fat": 0.21,
+        "fiber": 2.4,
+        "sugar": 10.34,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_015",
+    "name": "Cereza",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 50,
+        "protein": 1.0,
+        "carbs": 12.18,
+        "fat": 0.3,
+        "fiber": 1.6,
+        "sugar": 8.49
+      },
+      "perServing": {
+        "calories": 75,
+        "protein": 1.5,
+        "carbs": 18.27,
+        "fat": 0.45,
+        "fiber": 2.4,
+        "sugar": 12.74,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_016",
+    "name": "Brócoli",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 34,
+        "protein": 2.82,
+        "carbs": 6.64,
+        "fat": 0.37,
+        "fiber": 2.6,
+        "sugar": 1.7
+      },
+      "perServing": {
+        "calories": 51,
+        "protein": 4.23,
+        "carbs": 9.96,
+        "fat": 0.56,
+        "fiber": 3.9,
+        "sugar": 2.55,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_017",
+    "name": "Zanahoria",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 41,
+        "protein": 0.93,
+        "carbs": 9.58,
+        "fat": 0.24,
+        "fiber": 2.8,
+        "sugar": 4.74
+      },
+      "perServing": {
+        "calories": 62,
+        "protein": 1.4,
+        "carbs": 14.37,
+        "fat": 0.36,
+        "fiber": 4.2,
+        "sugar": 7.11,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_018",
+    "name": "Tomate",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 18,
+        "protein": 0.88,
+        "carbs": 3.92,
+        "fat": 0.2,
+        "fiber": 1.2,
+        "sugar": 2.63
+      },
+      "perServing": {
+        "calories": 27,
+        "protein": 1.32,
+        "carbs": 5.88,
+        "fat": 0.3,
+        "fiber": 1.8,
+        "sugar": 3.95,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_019",
+    "name": "Pepino",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 15,
+        "protein": 0.65,
+        "carbs": 3.63,
+        "fat": 0.11,
+        "fiber": 0.5,
+        "sugar": 1.67
+      },
+      "perServing": {
+        "calories": 23,
+        "protein": 0.98,
+        "carbs": 5.45,
+        "fat": 0.17,
+        "fiber": 0.75,
+        "sugar": 2.51,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_020",
+    "name": "Lechuga",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 15,
+        "protein": 1.36,
+        "carbs": 2.87,
+        "fat": 0.15,
+        "fiber": 1.3,
+        "sugar": 0.78
+      },
+      "perServing": {
+        "calories": 23,
+        "protein": 2.04,
+        "carbs": 4.31,
+        "fat": 0.23,
+        "fiber": 1.95,
+        "sugar": 1.17,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_021",
+    "name": "Espinaca",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 23,
+        "protein": 2.86,
+        "carbs": 3.63,
+        "fat": 0.39,
+        "fiber": 2.2,
+        "sugar": 0.42
+      },
+      "perServing": {
+        "calories": 35,
+        "protein": 4.29,
+        "carbs": 5.45,
+        "fat": 0.59,
+        "fiber": 3.3,
+        "sugar": 0.63,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_022",
+    "name": "Cebolla",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 40,
+        "protein": 1.1,
+        "carbs": 9.34,
+        "fat": 0.1,
+        "fiber": 1.7,
+        "sugar": 4.24
+      },
+      "perServing": {
+        "calories": 60,
+        "protein": 1.65,
+        "carbs": 14.01,
+        "fat": 0.15,
+        "fiber": 2.55,
+        "sugar": 6.36,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_023",
+    "name": "Pimiento rojo",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 31,
+        "protein": 0.99,
+        "carbs": 6.03,
+        "fat": 0.3,
+        "fiber": 2.1,
+        "sugar": 4.2
+      },
+      "perServing": {
+        "calories": 47,
+        "protein": 1.49,
+        "carbs": 9.05,
+        "fat": 0.45,
+        "fiber": 3.15,
+        "sugar": 6.3,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_024",
+    "name": "Calabacín",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 17,
+        "protein": 1.21,
+        "carbs": 3.11,
+        "fat": 0.32,
+        "fiber": 1.0,
+        "sugar": 2.5
+      },
+      "perServing": {
+        "calories": 26,
+        "protein": 1.82,
+        "carbs": 4.67,
+        "fat": 0.48,
+        "fiber": 1.5,
+        "sugar": 3.75,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_025",
+    "name": "Berenjena",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 25,
+        "protein": 0.98,
+        "carbs": 5.88,
+        "fat": 0.18,
+        "fiber": 3.0,
+        "sugar": 3.53
+      },
+      "perServing": {
+        "calories": 38,
+        "protein": 1.47,
+        "carbs": 8.82,
+        "fat": 0.27,
+        "fiber": 4.5,
+        "sugar": 5.3,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_026",
+    "name": "Coliflor",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 25,
+        "protein": 1.92,
+        "carbs": 4.97,
+        "fat": 0.28,
+        "fiber": 2.0,
+        "sugar": 1.91
+      },
+      "perServing": {
+        "calories": 38,
+        "protein": 2.88,
+        "carbs": 7.46,
+        "fat": 0.42,
+        "fiber": 3.0,
+        "sugar": 2.87,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_027",
+    "name": "Apio",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 16,
+        "protein": 0.69,
+        "carbs": 2.97,
+        "fat": 0.17,
+        "fiber": 1.6,
+        "sugar": 1.34
+      },
+      "perServing": {
+        "calories": 24,
+        "protein": 1.04,
+        "carbs": 4.46,
+        "fat": 0.26,
+        "fiber": 2.4,
+        "sugar": 2.01,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_028",
+    "name": "Judía verde",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 31,
+        "protein": 1.83,
+        "carbs": 7.13,
+        "fat": 0.22,
+        "fiber": 3.4,
+        "sugar": 3.26
+      },
+      "perServing": {
+        "calories": 47,
+        "protein": 2.75,
+        "carbs": 10.7,
+        "fat": 0.33,
+        "fiber": 5.1,
+        "sugar": 4.89,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_029",
+    "name": "Guisante",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 81,
+        "protein": 5.42,
+        "carbs": 14.45,
+        "fat": 0.4,
+        "fiber": 5.1,
+        "sugar": 5.67
+      },
+      "perServing": {
+        "calories": 122,
+        "protein": 8.13,
+        "carbs": 21.68,
+        "fat": 0.6,
+        "fiber": 7.65,
+        "sugar": 8.51,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_030",
+    "name": "Maíz dulce",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 86,
+        "protein": 3.27,
+        "carbs": 18.7,
+        "fat": 1.35,
+        "fiber": 2.0,
+        "sugar": 6.26
+      },
+      "perServing": {
+        "calories": 129,
+        "protein": 4.91,
+        "carbs": 28.05,
+        "fat": 2.03,
+        "fiber": 3.0,
+        "sugar": 9.39,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_031",
+    "name": "Pechuga de pollo",
+    "brand": "",
+    "category": "Carnes",
+    "nutrients": {
+      "per100g": {
+        "calories": 165,
+        "protein": 31.0,
+        "carbs": 0,
+        "fat": 3.6,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 248,
+        "protein": 46.5,
+        "carbs": 0,
+        "fat": 5.4,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_032",
+    "name": "Carne de res (magra)",
+    "brand": "",
+    "category": "Carnes",
+    "nutrients": {
+      "per100g": {
+        "calories": 250,
+        "protein": 26.0,
+        "carbs": 0,
+        "fat": 15.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 375,
+        "protein": 39.0,
+        "carbs": 0,
+        "fat": 22.5,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_033",
+    "name": "Lomo de cerdo",
+    "brand": "",
+    "category": "Carnes",
+    "nutrients": {
+      "per100g": {
+        "calories": 242,
+        "protein": 27.0,
+        "carbs": 0,
+        "fat": 14.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 363,
+        "protein": 40.5,
+        "carbs": 0,
+        "fat": 21.0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_034",
+    "name": "Pavo",
+    "brand": "",
+    "category": "Carnes",
+    "nutrients": {
+      "per100g": {
+        "calories": 135,
+        "protein": 29.0,
+        "carbs": 0,
+        "fat": 2.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 203,
+        "protein": 43.5,
+        "carbs": 0,
+        "fat": 3.0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_035",
+    "name": "Ternera",
+    "brand": "",
+    "category": "Carnes",
+    "nutrients": {
+      "per100g": {
+        "calories": 170,
+        "protein": 28.0,
+        "carbs": 0,
+        "fat": 6.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 255,
+        "protein": 42.0,
+        "carbs": 0,
+        "fat": 9.0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_036",
+    "name": "Cordero",
+    "brand": "",
+    "category": "Carnes",
+    "nutrients": {
+      "per100g": {
+        "calories": 294,
+        "protein": 25.0,
+        "carbs": 0,
+        "fat": 21.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 441,
+        "protein": 37.5,
+        "carbs": 0,
+        "fat": 31.5,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_037",
+    "name": "Salmón",
+    "brand": "",
+    "category": "Pescados",
+    "nutrients": {
+      "per100g": {
+        "calories": 208,
+        "protein": 22.0,
+        "carbs": 0,
+        "fat": 13.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 312,
+        "protein": 33.0,
+        "carbs": 0,
+        "fat": 19.5,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_038",
+    "name": "Atún",
+    "brand": "",
+    "category": "Pescados",
+    "nutrients": {
+      "per100g": {
+        "calories": 132,
+        "protein": 28.0,
+        "carbs": 0,
+        "fat": 1.3,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 198,
+        "protein": 42.0,
+        "carbs": 0,
+        "fat": 1.95,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_039",
+    "name": "Merluza",
+    "brand": "",
+    "category": "Pescados",
+    "nutrients": {
+      "per100g": {
+        "calories": 82,
+        "protein": 18.0,
+        "carbs": 0,
+        "fat": 1.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 123,
+        "protein": 27.0,
+        "carbs": 0,
+        "fat": 1.5,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_040",
+    "name": "Trucha",
+    "brand": "",
+    "category": "Pescados",
+    "nutrients": {
+      "per100g": {
+        "calories": 148,
+        "protein": 20.0,
+        "carbs": 0,
+        "fat": 7.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 222,
+        "protein": 30.0,
+        "carbs": 0,
+        "fat": 10.5,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_041",
+    "name": "Sardina",
+    "brand": "",
+    "category": "Pescados",
+    "nutrients": {
+      "per100g": {
+        "calories": 208,
+        "protein": 24.0,
+        "carbs": 0,
+        "fat": 12.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 312,
+        "protein": 36.0,
+        "carbs": 0,
+        "fat": 18.0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_042",
+    "name": "Calamar",
+    "brand": "",
+    "category": "Pescados",
+    "nutrients": {
+      "per100g": {
+        "calories": 92,
+        "protein": 16.0,
+        "carbs": 1.5,
+        "fat": 2.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 138,
+        "protein": 24.0,
+        "carbs": 2.25,
+        "fat": 3.0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_043",
+    "name": "Huevo",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 155,
+        "protein": 13.0,
+        "carbs": 1.1,
+        "fat": 11.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 93,
+        "protein": 7.8,
+        "carbs": 0.66,
+        "fat": 6.6,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 60,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_044",
+    "name": "Leche entera",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 64,
+        "protein": 3.3,
+        "carbs": 4.8,
+        "fat": 3.3,
+        "fiber": 0,
+        "sugar": 4.8
+      },
+      "perServing": {
+        "calories": 160,
+        "protein": 8.25,
+        "carbs": 12.0,
+        "fat": 8.25,
+        "fiber": 0,
+        "sugar": 12.0,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_045",
+    "name": "Leche semidesnatada",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 45,
+        "protein": 3.4,
+        "carbs": 4.8,
+        "fat": 1.5,
+        "fiber": 0,
+        "sugar": 4.8
+      },
+      "perServing": {
+        "calories": 113,
+        "protein": 8.5,
+        "carbs": 12.0,
+        "fat": 3.75,
+        "fiber": 0,
+        "sugar": 12.0,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_046",
+    "name": "Leche desnatada",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 34,
+        "protein": 3.4,
+        "carbs": 4.8,
+        "fat": 0.1,
+        "fiber": 0,
+        "sugar": 4.8
+      },
+      "perServing": {
+        "calories": 85,
+        "protein": 8.5,
+        "carbs": 12.0,
+        "fat": 0.25,
+        "fiber": 0,
+        "sugar": 12.0,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_047",
+    "name": "Yogur natural",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 61,
+        "protein": 3.5,
+        "carbs": 4.7,
+        "fat": 3.3,
+        "fiber": 0,
+        "sugar": 4.7
+      },
+      "perServing": {
+        "calories": 153,
+        "protein": 8.75,
+        "carbs": 11.75,
+        "fat": 8.25,
+        "fiber": 0,
+        "sugar": 11.75,
+        "servingSize": 250,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_048",
+    "name": "Yogur griego",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 97,
+        "protein": 9.0,
+        "carbs": 3.5,
+        "fat": 5.0,
+        "fiber": 0,
+        "sugar": 3.5
+      },
+      "perServing": {
+        "calories": 243,
+        "protein": 22.5,
+        "carbs": 8.75,
+        "fat": 12.5,
+        "fiber": 0,
+        "sugar": 8.75,
+        "servingSize": 250,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_049",
+    "name": "Queso curado",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 420,
+        "protein": 25.0,
+        "carbs": 1.3,
+        "fat": 35.0,
+        "fiber": 0,
+        "sugar": 0.5
+      },
+      "perServing": {
+        "calories": 105,
+        "protein": 6.25,
+        "carbs": 0.33,
+        "fat": 8.75,
+        "fiber": 0,
+        "sugar": 0.13,
+        "servingSize": 25,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_050",
+    "name": "Queso fresco",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 98,
+        "protein": 11.0,
+        "carbs": 2.5,
+        "fat": 5.0,
+        "fiber": 0,
+        "sugar": 2.5
+      },
+      "perServing": {
+        "calories": 49,
+        "protein": 5.5,
+        "carbs": 1.25,
+        "fat": 2.5,
+        "fiber": 0,
+        "sugar": 1.25,
+        "servingSize": 50,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_051",
+    "name": "Requesón",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 106,
+        "protein": 12.0,
+        "carbs": 3.4,
+        "fat": 5.0,
+        "fiber": 0,
+        "sugar": 3.0
+      },
+      "perServing": {
+        "calories": 53,
+        "protein": 6.0,
+        "carbs": 1.7,
+        "fat": 2.5,
+        "fiber": 0,
+        "sugar": 1.5,
+        "servingSize": 50,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_052",
+    "name": "Nata",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 345,
+        "protein": 2.8,
+        "carbs": 2.8,
+        "fat": 36.0,
+        "fiber": 0,
+        "sugar": 2.8
+      },
+      "perServing": {
+        "calories": 172,
+        "protein": 1.4,
+        "carbs": 1.4,
+        "fat": 18.0,
+        "fiber": 0,
+        "sugar": 1.4,
+        "servingSize": 50,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_053",
+    "name": "Mantequilla",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 717,
+        "protein": 0.85,
+        "carbs": 0.06,
+        "fat": 81.0,
+        "fiber": 0,
+        "sugar": 0.06
+      },
+      "perServing": {
+        "calories": 107,
+        "protein": 0.13,
+        "carbs": 0.01,
+        "fat": 12.15,
+        "fiber": 0,
+        "sugar": 0.01,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_054",
+    "name": "Arroz blanco (cocido)",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 130,
+        "protein": 2.7,
+        "carbs": 28.0,
+        "fat": 0.3,
+        "fiber": 0.4,
+        "sugar": 0.1
+      },
+      "perServing": {
+        "calories": 195,
+        "protein": 4.05,
+        "carbs": 42.0,
+        "fat": 0.45,
+        "fiber": 0.6,
+        "sugar": 0.15,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_055",
+    "name": "Arroz integral (cocido)",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 111,
+        "protein": 2.6,
+        "carbs": 23.0,
+        "fat": 0.9,
+        "fiber": 1.8,
+        "sugar": 0.2
+      },
+      "perServing": {
+        "calories": 167,
+        "protein": 3.9,
+        "carbs": 34.5,
+        "fat": 1.35,
+        "fiber": 2.7,
+        "sugar": 0.3,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_056",
+    "name": "Pasta (cocida)",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 131,
+        "protein": 5.0,
+        "carbs": 26.0,
+        "fat": 0.8,
+        "fiber": 1.8,
+        "sugar": 0.5
+      },
+      "perServing": {
+        "calories": 196,
+        "protein": 7.5,
+        "carbs": 39.0,
+        "fat": 1.2,
+        "fiber": 2.7,
+        "sugar": 0.75,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_057",
+    "name": "Pan blanco",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 265,
+        "protein": 9.0,
+        "carbs": 49.0,
+        "fat": 3.2,
+        "fiber": 2.2,
+        "sugar": 2.0
+      },
+      "perServing": {
+        "calories": 132,
+        "protein": 4.5,
+        "carbs": 24.5,
+        "fat": 1.6,
+        "fiber": 1.1,
+        "sugar": 1.0,
+        "servingSize": 50,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_058",
+    "name": "Pan integral",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 247,
+        "protein": 13.0,
+        "carbs": 41.0,
+        "fat": 4.0,
+        "fiber": 6.0,
+        "sugar": 1.0
+      },
+      "perServing": {
+        "calories": 124,
+        "protein": 6.5,
+        "carbs": 20.5,
+        "fat": 2.0,
+        "fiber": 3.0,
+        "sugar": 0.5,
+        "servingSize": 50,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_059",
+    "name": "Copos de avena",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 389,
+        "protein": 16.9,
+        "carbs": 66.3,
+        "fat": 6.9,
+        "fiber": 10.6,
+        "sugar": 0.9
+      },
+      "perServing": {
+        "calories": 389,
+        "protein": 16.9,
+        "carbs": 66.3,
+        "fat": 6.9,
+        "fiber": 10.6,
+        "sugar": 0.9,
+        "servingSize": 100,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_060",
+    "name": "Quinoa (cocida)",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 120,
+        "protein": 4.4,
+        "carbs": 21.3,
+        "fat": 1.9,
+        "fiber": 2.8,
+        "sugar": 0.9
+      },
+      "perServing": {
+        "calories": 180,
+        "protein": 6.6,
+        "carbs": 31.95,
+        "fat": 2.85,
+        "fiber": 4.2,
+        "sugar": 1.35,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_061",
+    "name": "Cuscús (cocido)",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 112,
+        "protein": 3.8,
+        "carbs": 23.2,
+        "fat": 0.2,
+        "fiber": 1.4,
+        "sugar": 0.1
+      },
+      "perServing": {
+        "calories": 168,
+        "protein": 5.7,
+        "carbs": 34.8,
+        "fat": 0.3,
+        "fiber": 2.1,
+        "sugar": 0.15,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_062",
+    "name": "Lentejas (cocidas)",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 116,
+        "protein": 9.0,
+        "carbs": 20.0,
+        "fat": 0.4,
+        "fiber": 8.0,
+        "sugar": 2.0
+      },
+      "perServing": {
+        "calories": 174,
+        "protein": 13.5,
+        "carbs": 30.0,
+        "fat": 0.6,
+        "fiber": 12.0,
+        "sugar": 3.0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_063",
+    "name": "Garbanzos (cocidos)",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 139,
+        "protein": 8.0,
+        "carbs": 23.0,
+        "fat": 2.0,
+        "fiber": 7.0,
+        "sugar": 2.0
+      },
+      "perServing": {
+        "calories": 209,
+        "protein": 12.0,
+        "carbs": 34.5,
+        "fat": 3.0,
+        "fiber": 10.5,
+        "sugar": 3.0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_064",
+    "name": "Judías negras (cocidas)",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 132,
+        "protein": 8.9,
+        "carbs": 23.7,
+        "fat": 0.5,
+        "fiber": 8.7,
+        "sugar": 0.3
+      },
+      "perServing": {
+        "calories": 198,
+        "protein": 13.35,
+        "carbs": 35.55,
+        "fat": 0.75,
+        "fiber": 13.05,
+        "sugar": 0.45,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_065",
+    "name": "Alubias pintas (cocidas)",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 143,
+        "protein": 9.0,
+        "carbs": 26.0,
+        "fat": 0.6,
+        "fiber": 7.0,
+        "sugar": 0.5
+      },
+      "perServing": {
+        "calories": 215,
+        "protein": 13.5,
+        "carbs": 39.0,
+        "fat": 0.9,
+        "fiber": 10.5,
+        "sugar": 0.75,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_066",
+    "name": "Soja",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 173,
+        "protein": 16.6,
+        "carbs": 9.9,
+        "fat": 9.0,
+        "fiber": 6.0,
+        "sugar": 0.6
+      },
+      "perServing": {
+        "calories": 260,
+        "protein": 24.9,
+        "carbs": 14.85,
+        "fat": 13.5,
+        "fiber": 9.0,
+        "sugar": 0.9,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_067",
+    "name": "Tofu",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 76,
+        "protein": 8.0,
+        "carbs": 1.9,
+        "fat": 4.8,
+        "fiber": 0.3,
+        "sugar": 0.1
+      },
+      "perServing": {
+        "calories": 114,
+        "protein": 12.0,
+        "carbs": 2.85,
+        "fat": 7.2,
+        "fiber": 0.45,
+        "sugar": 0.15,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_068",
+    "name": "Almendras",
+    "brand": "",
+    "category": "Frutos Secos",
+    "nutrients": {
+      "per100g": {
+        "calories": 579,
+        "protein": 21.2,
+        "carbs": 21.6,
+        "fat": 49.9,
+        "fiber": 12.5,
+        "sugar": 4.4
+      },
+      "perServing": {
+        "calories": 87,
+        "protein": 3.18,
+        "carbs": 3.24,
+        "fat": 7.49,
+        "fiber": 1.88,
+        "sugar": 0.66,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_069",
+    "name": "Nueces",
+    "brand": "",
+    "category": "Frutos Secos",
+    "nutrients": {
+      "per100g": {
+        "calories": 654,
+        "protein": 15.2,
+        "carbs": 13.7,
+        "fat": 65.2,
+        "fiber": 6.7,
+        "sugar": 2.6
+      },
+      "perServing": {
+        "calories": 98,
+        "protein": 2.28,
+        "carbs": 2.06,
+        "fat": 9.78,
+        "fiber": 1.01,
+        "sugar": 0.39,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_070",
+    "name": "Avellanas",
+    "brand": "",
+    "category": "Frutos Secos",
+    "nutrients": {
+      "per100g": {
+        "calories": 628,
+        "protein": 15.0,
+        "carbs": 16.7,
+        "fat": 60.8,
+        "fiber": 9.7,
+        "sugar": 4.3
+      },
+      "perServing": {
+        "calories": 94,
+        "protein": 2.25,
+        "carbs": 2.51,
+        "fat": 9.12,
+        "fiber": 1.46,
+        "sugar": 0.65,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_071",
+    "name": "Pistachos",
+    "brand": "",
+    "category": "Frutos Secos",
+    "nutrients": {
+      "per100g": {
+        "calories": 557,
+        "protein": 20.2,
+        "carbs": 27.7,
+        "fat": 44.4,
+        "fiber": 10.3,
+        "sugar": 7.7
+      },
+      "perServing": {
+        "calories": 84,
+        "protein": 3.03,
+        "carbs": 4.16,
+        "fat": 6.66,
+        "fiber": 1.55,
+        "sugar": 1.16,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_072",
+    "name": "Cacahuetes",
+    "brand": "",
+    "category": "Frutos Secos",
+    "nutrients": {
+      "per100g": {
+        "calories": 567,
+        "protein": 25.8,
+        "carbs": 16.1,
+        "fat": 49.2,
+        "fiber": 8.5,
+        "sugar": 3.8
+      },
+      "perServing": {
+        "calories": 85,
+        "protein": 3.87,
+        "carbs": 2.42,
+        "fat": 7.38,
+        "fiber": 1.28,
+        "sugar": 0.57,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_073",
+    "name": "Semillas de chía",
+    "brand": "",
+    "category": "Frutos Secos",
+    "nutrients": {
+      "per100g": {
+        "calories": 486,
+        "protein": 16.5,
+        "carbs": 42.1,
+        "fat": 30.7,
+        "fiber": 34.4,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 73,
+        "protein": 2.48,
+        "carbs": 6.32,
+        "fat": 4.61,
+        "fiber": 5.16,
+        "sugar": 0,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_074",
+    "name": "Semillas de lino",
+    "brand": "",
+    "category": "Frutos Secos",
+    "nutrients": {
+      "per100g": {
+        "calories": 534,
+        "protein": 18.3,
+        "carbs": 28.9,
+        "fat": 42.2,
+        "fiber": 27.3,
+        "sugar": 1.6
+      },
+      "perServing": {
+        "calories": 80,
+        "protein": 2.75,
+        "carbs": 4.34,
+        "fat": 6.33,
+        "fiber": 4.1,
+        "sugar": 0.24,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_075",
+    "name": "Semillas de calabaza",
+    "brand": "",
+    "category": "Frutos Secos",
+    "nutrients": {
+      "per100g": {
+        "calories": 559,
+        "protein": 30.2,
+        "carbs": 10.7,
+        "fat": 49.0,
+        "fiber": 6.0,
+        "sugar": 1.4
+      },
+      "perServing": {
+        "calories": 84,
+        "protein": 4.53,
+        "carbs": 1.61,
+        "fat": 7.35,
+        "fiber": 0.9,
+        "sugar": 0.21,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_076",
+    "name": "Aceite de oliva",
+    "brand": "",
+    "category": "Aceites y Grasas",
+    "nutrients": {
+      "per100g": {
+        "calories": 884,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 100,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 88,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 10,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 10,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_077",
+    "name": "Aceite de girasol",
+    "brand": "",
+    "category": "Aceites y Grasas",
+    "nutrients": {
+      "per100g": {
+        "calories": 884,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 100,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 88,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 10,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 10,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_078",
+    "name": "Aceite de coco",
+    "brand": "",
+    "category": "Aceites y Grasas",
+    "nutrients": {
+      "per100g": {
+        "calories": 862,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 100,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 86,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 10,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 10,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_079",
+    "name": "Agua",
+    "brand": "",
+    "category": "Bebidas",
+    "nutrients": {
+      "per100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_080",
+    "name": "Café (sin azúcar)",
+    "brand": "",
+    "category": "Bebidas",
+    "nutrients": {
+      "per100g": {
+        "calories": 2,
+        "protein": 0.3,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 5,
+        "protein": 0.75,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_081",
+    "name": "Té (sin azúcar)",
+    "brand": "",
+    "category": "Bebidas",
+    "nutrients": {
+      "per100g": {
+        "calories": 1,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 2,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_082",
+    "name": "Zumo de naranja natural",
+    "brand": "",
+    "category": "Bebidas",
+    "nutrients": {
+      "per100g": {
+        "calories": 45,
+        "protein": 0.7,
+        "carbs": 10.4,
+        "fat": 0.2,
+        "fiber": 0.2,
+        "sugar": 8.3
+      },
+      "perServing": {
+        "calories": 113,
+        "protein": 1.75,
+        "carbs": 26.0,
+        "fat": 0.5,
+        "fiber": 0.5,
+        "sugar": 20.75,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_083",
+    "name": "Zumo de manzana",
+    "brand": "",
+    "category": "Bebidas",
+    "nutrients": {
+      "per100g": {
+        "calories": 46,
+        "protein": 0.1,
+        "carbs": 11.3,
+        "fat": 0.1,
+        "fiber": 0.2,
+        "sugar": 10.0
+      },
+      "perServing": {
+        "calories": 115,
+        "protein": 0.25,
+        "carbs": 28.25,
+        "fat": 0.25,
+        "fiber": 0.5,
+        "sugar": 25.0,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_084",
+    "name": "Coca-Cola",
+    "brand": "",
+    "category": "Bebidas",
+    "nutrients": {
+      "per100g": {
+        "calories": 42,
+        "protein": 0,
+        "carbs": 10.6,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 10.6
+      },
+      "perServing": {
+        "calories": 105,
+        "protein": 0,
+        "carbs": 26.5,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 26.5,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_085",
+    "name": "Coca-Cola Zero",
+    "brand": "",
+    "category": "Bebidas",
+    "nutrients": {
+      "per100g": {
+        "calories": 0.3,
+        "protein": 0,
+        "carbs": 0.1,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 0.8,
+        "protein": 0,
+        "carbs": 0.25,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_086",
+    "name": "Chocolate negro (70%)",
+    "brand": "",
+    "category": "Snacks y Dulces",
+    "nutrients": {
+      "per100g": {
+        "calories": 598,
+        "protein": 7.8,
+        "carbs": 45.9,
+        "fat": 42.6,
+        "fiber": 10.9,
+        "sugar": 23.5
+      },
+      "perServing": {
+        "calories": 120,
+        "protein": 1.56,
+        "carbs": 9.18,
+        "fat": 8.52,
+        "fiber": 2.18,
+        "sugar": 4.7,
+        "servingSize": 20,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_087",
+    "name": "Chocolate con leche",
+    "brand": "",
+    "category": "Snacks y Dulces",
+    "nutrients": {
+      "per100g": {
+        "calories": 546,
+        "protein": 6.9,
+        "carbs": 56.8,
+        "fat": 32.0,
+        "fiber": 3.4,
+        "sugar": 54.0
+      },
+      "perServing": {
+        "calories": 109,
+        "protein": 1.38,
+        "carbs": 11.36,
+        "fat": 6.4,
+        "fiber": 0.68,
+        "sugar": 10.8,
+        "servingSize": 20,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_088",
+    "name": "Galletas María",
+    "brand": "",
+    "category": "Snacks y Dulces",
+    "nutrients": {
+      "per100g": {
+        "calories": 440,
+        "protein": 7.0,
+        "carbs": 70.0,
+        "fat": 15.0,
+        "fiber": 2.0,
+        "sugar": 20.0
+      },
+      "perServing": {
+        "calories": 88,
+        "protein": 1.4,
+        "carbs": 14.0,
+        "fat": 3.0,
+        "fiber": 0.4,
+        "sugar": 4.0,
+        "servingSize": 20,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_089",
+    "name": "Magdalena",
+    "brand": "",
+    "category": "Snacks y Dulces",
+    "nutrients": {
+      "per100g": {
+        "calories": 400,
+        "protein": 5.0,
+        "carbs": 50.0,
+        "fat": 20.0,
+        "fiber": 1.0,
+        "sugar": 25.0
+      },
+      "perServing": {
+        "calories": 140,
+        "protein": 1.75,
+        "carbs": 17.5,
+        "fat": 7.0,
+        "fiber": 0.35,
+        "sugar": 8.75,
+        "servingSize": 35,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_090",
+    "name": "Helado de vainilla",
+    "brand": "",
+    "category": "Snacks y Dulces",
+    "nutrients": {
+      "per100g": {
+        "calories": 207,
+        "protein": 3.5,
+        "carbs": 23.6,
+        "fat": 11.0,
+        "fiber": 0.7,
+        "sugar": 21.0
+      },
+      "perServing": {
+        "calories": 155,
+        "protein": 2.63,
+        "carbs": 17.7,
+        "fat": 8.25,
+        "fiber": 0.53,
+        "sugar": 15.75,
+        "servingSize": 75,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_091",
+    "name": "Mostaza",
+    "brand": "",
+    "category": "Condimentos",
+    "nutrients": {
+      "per100g": {
+        "calories": 66,
+        "protein": 3.7,
+        "carbs": 5.8,
+        "fat": 3.3,
+        "fiber": 3.0,
+        "sugar": 0.9
+      },
+      "perServing": {
+        "calories": 10,
+        "protein": 0.56,
+        "carbs": 0.87,
+        "fat": 0.5,
+        "fiber": 0.45,
+        "sugar": 0.14,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_092",
+    "name": "Kétchup",
+    "brand": "",
+    "category": "Condimentos",
+    "nutrients": {
+      "per100g": {
+        "calories": 100,
+        "protein": 1.0,
+        "carbs": 23.0,
+        "fat": 0.1,
+        "fiber": 0.3,
+        "sugar": 22.0
+      },
+      "perServing": {
+        "calories": 15,
+        "protein": 0.15,
+        "carbs": 3.45,
+        "fat": 0.02,
+        "fiber": 0.05,
+        "sugar": 3.3,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_093",
+    "name": "Mayonesa",
+    "brand": "",
+    "category": "Condimentos",
+    "nutrients": {
+      "per100g": {
+        "calories": 720,
+        "protein": 1.0,
+        "carbs": 1.0,
+        "fat": 80.0,
+        "fiber": 0,
+        "sugar": 1.0
+      },
+      "perServing": {
+        "calories": 108,
+        "protein": 0.15,
+        "carbs": 0.15,
+        "fat": 12.0,
+        "fiber": 0,
+        "sugar": 0.15,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_094",
+    "name": "Vinagre",
+    "brand": "",
+    "category": "Condimentos",
+    "nutrients": {
+      "per100g": {
+        "calories": 18,
+        "protein": 0,
+        "carbs": 0.1,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0.1
+      },
+      "perServing": {
+        "calories": 3,
+        "protein": 0,
+        "carbs": 0.02,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0.02,
+        "servingSize": 15,
+        "servingUnit": "ml"
+      }
+    }
+  },
+    {
+    "id": "food_095",
+    "name": "Pechuga de pavo",
+    "brand": "",
+    "category": "Carnes",
+    "nutrients": {
+      "per100g": {
+        "calories": 135,
+        "protein": 30.0,
+        "carbs": 0,
+        "fat": 1.5,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 203,
+        "protein": 45.0,
+        "carbs": 0,
+        "fat": 2.25,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_096",
+    "name": "Cordero (pierna)",
+    "brand": "",
+    "category": "Carnes",
+    "nutrients": {
+      "per100g": {
+        "calories": 294,
+        "protein": 25.0,
+        "carbs": 0,
+        "fat": 21.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 441,
+        "protein": 37.5,
+        "carbs": 0,
+        "fat": 31.5,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_097",
+    "name": "Calamares (fritos)",
+    "brand": "",
+    "category": "Pescados",
+    "nutrients": {
+      "per100g": {
+        "calories": 175,
+        "protein": 15.0,
+        "carbs": 10.0,
+        "fat": 8.0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 262,
+        "protein": 22.5,
+        "carbs": 15.0,
+        "fat": 12.0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_098",
+    "name": "Gambas",
+    "brand": "",
+    "category": "Pescados",
+    "nutrients": {
+      "per100g": {
+        "calories": 85,
+        "protein": 20.0,
+        "carbs": 0,
+        "fat": 0.5,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 128,
+        "protein": 30.0,
+        "carbs": 0,
+        "fat": 0.75,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_099",
+    "name": "Bacalao",
+    "brand": "",
+    "category": "Pescados",
+    "nutrients": {
+      "per100g": {
+        "calories": 82,
+        "protein": 18.0,
+        "carbs": 0,
+        "fat": 0.7,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 123,
+        "protein": 27.0,
+        "carbs": 0,
+        "fat": 1.05,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_100",
+    "name": "Queso manchego",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 370,
+        "protein": 24.0,
+        "carbs": 1.5,
+        "fat": 30.0,
+        "fiber": 0,
+        "sugar": 0.5
+      },
+      "perServing": {
+        "calories": 92,
+        "protein": 6.0,
+        "carbs": 0.38,
+        "fat": 7.5,
+        "fiber": 0,
+        "sugar": 0.13,
+        "servingSize": 25,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_101",
+    "name": "Queso de cabra",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 364,
+        "protein": 22.0,
+        "carbs": 1.0,
+        "fat": 30.0,
+        "fiber": 0,
+        "sugar": 0.5
+      },
+      "perServing": {
+        "calories": 91,
+        "protein": 5.5,
+        "carbs": 0.25,
+        "fat": 7.5,
+        "fiber": 0,
+        "sugar": 0.13,
+        "servingSize": 25,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_102",
+    "name": "Mozzarella",
+    "brand": "",
+    "category": "Lácteos y Huevos",
+    "nutrients": {
+      "per100g": {
+        "calories": 280,
+        "protein": 28.0,
+        "carbs": 1.0,
+        "fat": 17.0,
+        "fiber": 0,
+        "sugar": 0.5
+      },
+      "perServing": {
+        "calories": 70,
+        "protein": 7.0,
+        "carbs": 0.25,
+        "fat": 4.25,
+        "fiber": 0,
+        "sugar": 0.13,
+        "servingSize": 25,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_103",
+    "name": "Lentejas rojas (cocidas)",
+    "brand": "",
+    "category": "Cereales y Legumbres",
+    "nutrients": {
+      "per100g": {
+        "calories": 116,
+        "protein": 9.0,
+        "carbs": 20.0,
+        "fat": 0.4,
+        "fiber": 8.0,
+        "sugar": 2.0
+      },
+      "perServing": {
+        "calories": 174,
+        "protein": 13.5,
+        "carbs": 30.0,
+        "fat": 0.6,
+        "fiber": 12.0,
+        "sugar": 3.0,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_104",
+    "name": "Guisantes congelados",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 81,
+        "protein": 5.4,
+        "carbs": 14.5,
+        "fat": 0.4,
+        "fiber": 5.1,
+        "sugar": 5.7
+      },
+      "perServing": {
+        "calories": 122,
+        "protein": 8.1,
+        "carbs": 21.75,
+        "fat": 0.6,
+        "fiber": 7.65,
+        "sugar": 8.55,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_105",
+    "name": "Espárragos",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 20,
+        "protein": 2.2,
+        "carbs": 3.9,
+        "fat": 0.1,
+        "fiber": 2.1,
+        "sugar": 1.9
+      },
+      "perServing": {
+        "calories": 30,
+        "protein": 3.3,
+        "carbs": 5.85,
+        "fat": 0.15,
+        "fiber": 3.15,
+        "sugar": 2.85,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_106",
+    "name": "Acelgas",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 19,
+        "protein": 1.8,
+        "carbs": 3.7,
+        "fat": 0.2,
+        "fiber": 1.8,
+        "sugar": 1.1
+      },
+      "perServing": {
+        "calories": 29,
+        "protein": 2.7,
+        "carbs": 5.55,
+        "fat": 0.3,
+        "fiber": 2.7,
+        "sugar": 1.65,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_107",
+    "name": "Nueces de macadamia",
+    "brand": "",
+    "category": "Frutos Secos",
+    "nutrients": {
+      "per100g": {
+        "calories": 718,
+        "protein": 7.9,
+        "carbs": 13.8,
+        "fat": 75.8,
+        "fiber": 8.6,
+        "sugar": 4.6
+      },
+      "perServing": {
+        "calories": 108,
+        "protein": 1.19,
+        "carbs": 2.07,
+        "fat": 11.37,
+        "fiber": 1.29,
+        "sugar": 0.69,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_108",
+    "name": "Anacardos",
+    "brand": "",
+    "category": "Frutos Secos",
+    "nutrients": {
+      "per100g": {
+        "calories": 553,
+        "protein": 18.2,
+        "carbs": 30.2,
+        "fat": 43.9,
+        "fiber": 3.3,
+        "sugar": 5.9
+      },
+      "perServing": {
+        "calories": 83,
+        "protein": 2.73,
+        "carbs": 4.53,
+        "fat": 6.59,
+        "fiber": 0.5,
+        "sugar": 0.89,
+        "servingSize": 15,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_109",
+    "name": "Cerveza (lager)",
+    "brand": "",
+    "category": "Bebidas",
+    "nutrients": {
+      "per100g": {
+        "calories": 43,
+        "protein": 0.5,
+        "carbs": 3.6,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 108,
+        "protein": 1.25,
+        "carbs": 9.0,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_110",
+    "name": "Vino tinto",
+    "brand": "",
+    "category": "Bebidas",
+    "nutrients": {
+      "per100g": {
+        "calories": 85,
+        "protein": 0.1,
+        "carbs": 2.6,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 0.6
+      },
+      "perServing": {
+        "calories": 170,
+        "protein": 0.2,
+        "carbs": 5.2,
+        "fat": 0,
+        "fiber": 0,
+        "sugar": 1.2,
+        "servingSize": 200,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_111",
+    "name": "Palta (aguacate)",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 160,
+        "protein": 2.0,
+        "carbs": 8.5,
+        "fat": 14.7,
+        "fiber": 6.7,
+        "sugar": 0.7
+      },
+      "perServing": {
+        "calories": 240,
+        "protein": 3.0,
+        "carbs": 12.75,
+        "fat": 22.05,
+        "fiber": 10.05,
+        "sugar": 1.05,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_112",
+    "name": "Champiñones",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 22,
+        "protein": 3.1,
+        "carbs": 3.3,
+        "fat": 0.3,
+        "fiber": 1.0,
+        "sugar": 1.7
+      },
+      "perServing": {
+        "calories": 33,
+        "protein": 4.65,
+        "carbs": 4.95,
+        "fat": 0.45,
+        "fiber": 1.5,
+        "sugar": 2.55,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_113",
+    "name": "Pimiento verde",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 20,
+        "protein": 0.9,
+        "carbs": 4.6,
+        "fat": 0.2,
+        "fiber": 1.7,
+        "sugar": 2.4
+      },
+      "perServing": {
+        "calories": 30,
+        "protein": 1.35,
+        "carbs": 6.9,
+        "fat": 0.3,
+        "fiber": 2.55,
+        "sugar": 3.6,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_114",
+    "name": "Alcachofa",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 47,
+        "protein": 3.3,
+        "carbs": 10.5,
+        "fat": 0.2,
+        "fiber": 5.4,
+        "sugar": 1.0
+      },
+      "perServing": {
+        "calories": 71,
+        "protein": 4.95,
+        "carbs": 15.75,
+        "fat": 0.3,
+        "fiber": 8.1,
+        "sugar": 1.5,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_115",
+    "name": "Boniato",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 86,
+        "protein": 1.6,
+        "carbs": 20.1,
+        "fat": 0.1,
+        "fiber": 3.0,
+        "sugar": 4.2
+      },
+      "perServing": {
+        "calories": 129,
+        "protein": 2.4,
+        "carbs": 30.15,
+        "fat": 0.15,
+        "fiber": 4.5,
+        "sugar": 6.3,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_116",
+    "name": "Remolacha",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 43,
+        "protein": 1.6,
+        "carbs": 9.6,
+        "fat": 0.2,
+        "fiber": 2.8,
+        "sugar": 6.8
+      },
+      "perServing": {
+        "calories": 65,
+        "protein": 2.4,
+        "carbs": 14.4,
+        "fat": 0.3,
+        "fiber": 4.2,
+        "sugar": 10.2,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_117",
+    "name": "Cilantro",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 23,
+        "protein": 2.1,
+        "carbs": 3.7,
+        "fat": 0.5,
+        "fiber": 2.8,
+        "sugar": 0.9
+      },
+      "perServing": {
+        "calories": 35,
+        "protein": 3.15,
+        "carbs": 5.55,
+        "fat": 0.75,
+        "fiber": 4.2,
+        "sugar": 1.35,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_118",
+    "name": "Perejil",
+    "brand": "",
+    "category": "Verduras",
+    "nutrients": {
+      "per100g": {
+        "calories": 36,
+        "protein": 3.0,
+        "carbs": 6.3,
+        "fat": 0.8,
+        "fiber": 3.3,
+        "sugar": 0.9
+      },
+      "perServing": {
+        "calories": 54,
+        "protein": 4.5,
+        "carbs": 9.45,
+        "fat": 1.2,
+        "fiber": 4.95,
+        "sugar": 1.35,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_119",
+    "name": "Melón",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 34,
+        "protein": 0.8,
+        "carbs": 8.2,
+        "fat": 0.2,
+        "fiber": 0.9,
+        "sugar": 7.9
+      },
+      "perServing": {
+        "calories": 51,
+        "protein": 1.2,
+        "carbs": 12.3,
+        "fat": 0.3,
+        "fiber": 1.35,
+        "sugar": 11.85,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_120",
+    "name": "Papaya",
+    "brand": "",
+    "category": "Frutas",
+    "nutrients": {
+      "per100g": {
+        "calories": 43,
+        "protein": 0.5,
+        "carbs": 10.8,
+        "fat": 0.3,
+        "fiber": 1.7,
+        "sugar": 7.8
+      },
+      "perServing": {
+        "calories": 65,
+        "protein": 0.75,
+        "carbs": 16.2,
+        "fat": 0.45,
+        "fiber": 2.55,
+        "sugar": 11.7,
+        "servingSize": 150,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_121",
+    "name": "Miel",
+    "brand": "",
+    "category": "Dulces",
+    "nutrients": {
+      "per100g": {
+        "calories": 304,
+        "protein": 0.3,
+        "carbs": 82.4,
+        "fat": 0,
+        "fiber": 0.2,
+        "sugar": 82.1
+      },
+      "perServing": {
+        "calories": 61,
+        "protein": 0.06,
+        "carbs": 16.48,
+        "fat": 0,
+        "fiber": 0.04,
+        "sugar": 16.42,
+        "servingSize": 20,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_122",
+    "name": "Mermelada de fresa",
+    "brand": "",
+    "category": "Dulces",
+    "nutrients": {
+      "per100g": {
+        "calories": 250,
+        "protein": 0.4,
+        "carbs": 65.0,
+        "fat": 0.1,
+        "fiber": 0.5,
+        "sugar": 60.0
+      },
+      "perServing": {
+        "calories": 50,
+        "protein": 0.08,
+        "carbs": 13.0,
+        "fat": 0.02,
+        "fiber": 0.1,
+        "sugar": 12.0,
+        "servingSize": 20,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_123",
+    "name": "Nutella",
+    "brand": "",
+    "category": "Dulces",
+    "nutrients": {
+      "per100g": {
+        "calories": 539,
+        "protein": 6.0,
+        "carbs": 57.0,
+        "fat": 32.0,
+        "fiber": 3.5,
+        "sugar": 56.0
+      },
+      "perServing": {
+        "calories": 108,
+        "protein": 1.2,
+        "carbs": 11.4,
+        "fat": 6.4,
+        "fiber": 0.7,
+        "sugar": 11.2,
+        "servingSize": 20,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_124",
+    "name": "Crema de cacahuete",
+    "brand": "",
+    "category": "Dulces",
+    "nutrients": {
+      "per100g": {
+        "calories": 588,
+        "protein": 25.0,
+        "carbs": 20.0,
+        "fat": 50.0,
+        "fiber": 6.0,
+        "sugar": 9.0
+      },
+      "perServing": {
+        "calories": 117,
+        "protein": 5.0,
+        "carbs": 4.0,
+        "fat": 10.0,
+        "fiber": 1.2,
+        "sugar": 1.8,
+        "servingSize": 20,
+        "servingUnit": "g"
+      }
+    }
+  },
+  {
+    "id": "food_125",
+    "name": "Salsa de soja",
+    "brand": "",
+    "category": "Condimentos",
+    "nutrients": {
+      "per100g": {
+        "calories": 53,
+        "protein": 8.0,
+        "carbs": 4.0,
+        "fat": 0.1,
+        "fiber": 0.5,
+        "sugar": 0.5
+      },
+      "perServing": {
+        "calories": 8,
+        "protein": 1.2,
+        "carbs": 0.6,
+        "fat": 0.02,
+        "fiber": 0.08,
+        "sugar": 0.08,
+        "servingSize": 15,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_126",
+    "name": "Aceite de sésamo",
+    "brand": "",
+    "category": "Aceites y Grasas",
+    "nutrients": {
+      "per100g": {
+        "calories": 884,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 100,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 88,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 10,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 10,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_127",
+    "name": "Aceite de linaza",
+    "brand": "",
+    "category": "Aceites y Grasas",
+    "nutrients": {
+      "per100g": {
+        "calories": 884,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 100,
+        "fiber": 0,
+        "sugar": 0
+      },
+      "perServing": {
+        "calories": 88,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 10,
+        "fiber": 0,
+        "sugar": 0,
+        "servingSize": 10,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_128",
+    "name": "Agua de coco",
+    "brand": "",
+    "category": "Bebidas",
+    "nutrients": {
+      "per100g": {
+        "calories": 19,
+        "protein": 0.7,
+        "carbs": 3.7,
+        "fat": 0.2,
+        "fiber": 0.5,
+        "sugar": 2.6
+      },
+      "perServing": {
+        "calories": 47,
+        "protein": 1.75,
+        "carbs": 9.25,
+        "fat": 0.5,
+        "fiber": 1.25,
+        "sugar": 6.5,
+        "servingSize": 250,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_129",
+    "name": "Batido de proteínas (suero)",
+    "brand": "",
+    "category": "Suplementos",
+    "nutrients": {
+      "per100g": {
+        "calories": 120,
+        "protein": 25.0,
+        "carbs": 4.0,
+        "fat": 1.0,
+        "fiber": 0,
+        "sugar": 2.0
+      },
+      "perServing": {
+        "calories": 180,
+        "protein": 37.5,
+        "carbs": 6.0,
+        "fat": 1.5,
+        "fiber": 0,
+        "sugar": 3.0,
+        "servingSize": 150,
+        "servingUnit": "ml"
+      }
+    }
+  },
+  {
+    "id": "food_130",
+    "name": "Barrita de proteínas",
+    "brand": "",
+    "category": "Snacks",
+    "nutrients": {
+      "per100g": {
+        "calories": 380,
+        "protein": 30.0,
+        "carbs": 40.0,
+        "fat": 12.0,
+        "fiber": 5.0,
+        "sugar": 15.0
+      },
+      "perServing": {
+        "calories": 190,
+        "protein": 15.0,
+        "carbs": 20.0,
+        "fat": 6.0,
+        "fiber": 2.5,
+        "sugar": 7.5,
+        "servingSize": 50,
+        "servingUnit": "g"
+      }
+    }
+  }
+]

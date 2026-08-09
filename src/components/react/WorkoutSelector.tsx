@@ -1,6 +1,7 @@
 // components/workout/WorkoutSelector.tsx
 import { useState } from 'react';
 import { type Routine } from '../../types/exercises.types';
+import AlertsToast from './AlertsToast';
 
 interface WorkoutSelectorProps {
   routines: Routine[];
@@ -65,7 +66,10 @@ export const WorkoutSelector = ({
                   if (workoutName.trim()) {
                     onStartFreeWorkout(workoutName.trim());
                   } else {
-                    alert('Por favor, ingresa un nombre para el entrenamiento');
+                    <AlertsToast
+                    message='Por favor ingresa un nombre para el entrenamiento'
+                    duration={3000}
+                    color='warning'/>
                   }
                 }}
                 disabled={!workoutName.trim()}
@@ -111,7 +115,10 @@ export const WorkoutSelector = ({
                     if (selectedRoutineId) {
                       onStartRoutineWorkout(selectedRoutineId);
                     } else {
-                      alert('Por favor, selecciona una rutina');
+                      <AlertsToast
+                      message='Por favor selecciona una rutina'
+                      duration={3000}
+                      color='warning'/>
                     }
                   }}
                   disabled={!selectedRoutineId}

@@ -19,6 +19,9 @@ import {
   getBestEstimatedPRs,
 } from '../utils/workoutCalculations';
 
+// ✅ Definir tipo para el callback de toast
+type ToastCallback = (message: string, color?: 'success' | 'error' | 'warning' | 'info' | 'default', duration?: number) => void;
+
 interface WorkoutState {
   // ============ ESTADO ============
   workouts: Workout[];
@@ -30,11 +33,11 @@ interface WorkoutState {
   addExerciseToWorkout: (exerciseId: string, name: string, image: string, unit: Unit, sets: ExerciseSet[]) => void;
   updateWorkoutSet: (exerciseId: string, setIndex: number, updates: Partial<WorkoutSet>) => void;
   removeExerciseFromWorkout: (exerciseId: string) => void;
-  completeWorkout: () => WorkoutReport | null;
-  cancelWorkout: () => void;
+  completeWorkout: (showToast?: ToastCallback) => WorkoutReport | null;
+  cancelWorkout: (showToast?: ToastCallback) => void;
   loadWorkout: (workoutId: string) => void;
-  deleteWorkout: (workoutId: string) => void;
-  clearHistory: () => void;
+  deleteWorkout: (workoutId: string, showToast?: ToastCallback) => void;
+  clearHistory: (showToast?: ToastCallback) => void;
   
   // ============ FUNCIONES DE PRs ============
   getLastRecordForExercise: (exerciseId: string) => PersonalRecord | null;
@@ -98,7 +101,6 @@ export const useWorkoutStore = create<WorkoutState>()(
           actualWeight: 0,
           actualRir: 0,
           completed: false,
-          // ✅ Placeholders para PRs
           previousBestReps: bestRecord?.reps || null,
           previousBestWeight: bestRecord?.weight || null,
           lastReps: lastRecord?.reps || null,
@@ -144,14 +146,18 @@ export const useWorkoutStore = create<WorkoutState>()(
       },
 
       // ============ COMPLETAR ENTRENAMIENTO ============
-      completeWorkout: () => {
+      completeWorkout: (showToast?: ToastCallback) => {
         const { currentWorkout, workouts, personalRecords } = get();
         if (!currentWorkout) return null;
 
         // Verificar que todos los sets estén completados
         const allCompleted = currentWorkout.exercises.every((set) => set.completed);
         if (!allCompleted) {
-          alert('Hay ejercicios sin completar. ¿Seguro que quieres finalizar?');
+          if (showToast) {
+            showToast('Hay ejercicios sin completar. ¿Seguro que quieres finalizar?', 'warning', 3500);
+          } else {
+            alert('Hay ejercicios sin completar. ¿Seguro que quieres finalizar?');
+          }
           return null;
         }
 
@@ -161,7 +167,6 @@ export const useWorkoutStore = create<WorkoutState>()(
 
         currentWorkout.exercises.forEach((set) => {
           if (set.completed && set.actualReps > 0 && set.actualWeight > 0) {
-            // Verificar si es un nuevo PR
             const { isNewPR, previousPR, improvement } = checkNewPR(
               set.exerciseId,
               set.actualWeight,
@@ -181,7 +186,6 @@ export const useWorkoutStore = create<WorkoutState>()(
               newPRs.push(newPR);
             }
 
-            // Guardar el mejor registro para este ejercicio
             const best = getBestRecordForExercise(set.exerciseId, personalRecords);
             if (best) {
               exerciseMap.set(set.exerciseId, best);
@@ -194,37 +198,55 @@ export const useWorkoutStore = create<WorkoutState>()(
           duration: 0,
         };
 
-        // ✅ Actualizar estado
         set({
           workouts: [...workouts, completedWorkout],
           currentWorkout: null,
           personalRecords: [...personalRecords, ...newPRs],
         });
 
-        // ✅ Generar reporte
         const report = get().getWorkoutReport(completedWorkout.id);
         
-        // Mostrar mensaje de nuevos PRs
-        if (newPRs.length > 0) {
-          const prMessages = newPRs.map(
-            (pr) => `🏆 ${pr.exerciseName}: ${pr.weight}${pr.unit} x ${pr.reps} reps`
-          );
-          setTimeout(() => {
-            alert(`¡Nuevos Récords Personales! 🎉\n\n${prMessages.join('\n')}`);
-          }, 100);
+        // ✅ Mostrar toast en lugar de alert
+        if (showToast) {
+          if (newPRs.length > 0) {
+            const prMessages = newPRs.map(
+              (pr) => `🏆 ${pr.exerciseName}: ${pr.weight}${pr.unit} x ${pr.reps} reps`
+            );
+            setTimeout(() => {
+              showToast(`¡Nuevos Récords Personales! 🎉\n${prMessages.join('\n')}`, 'success', 5000);
+            }, 100);
+          } else {
+            setTimeout(() => {
+              showToast('¡Entrenamiento completado con éxito! 💪', 'success', 3000);
+            }, 100);
+          }
         } else {
-          setTimeout(() => {
-            alert('¡Entrenamiento completado con éxito! 💪');
-          }, 100);
+          if (newPRs.length > 0) {
+            const prMessages = newPRs.map(
+              (pr) => `🏆 ${pr.exerciseName}: ${pr.weight}${pr.unit} x ${pr.reps} reps`
+            );
+            setTimeout(() => {
+              alert(`¡Nuevos Récords Personales! 🎉\n\n${prMessages.join('\n')}`);
+            }, 100);
+          } else {
+            setTimeout(() => {
+              alert('¡Entrenamiento completado con éxito! 💪');
+            }, 100);
+          }
         }
 
         return report;
       },
 
       // ============ CANCELAR ENTRENAMIENTO ============
-      cancelWorkout: () => {
-        if (window.confirm('¿Cancelar entrenamiento? Se perderá todo el progreso.')) {
+      cancelWorkout: (showToast?: ToastCallback) => {
+        if (showToast) {
+          showToast('Entrenamiento cancelado', 'info', 2500);
           set({ currentWorkout: null });
+        } else {
+          if (window.confirm('¿Cancelar entrenamiento? Se perderá todo el progreso.')) {
+            set({ currentWorkout: null });
+          }
         }
       },
 
@@ -238,18 +260,31 @@ export const useWorkoutStore = create<WorkoutState>()(
       },
 
       // ============ ELIMINAR ENTRENAMIENTO ============
-      deleteWorkout: (workoutId: string) => {
-        if (window.confirm('¿Eliminar este entrenamiento del historial?')) {
+      deleteWorkout: (workoutId: string, showToast?: ToastCallback) => {
+        const workout = get().workouts.find((w) => w.id === workoutId);
+        if (showToast) {
           set({
             workouts: get().workouts.filter((w) => w.id !== workoutId),
           });
+          showToast(`Entrenamiento "${workout?.name || ''}" eliminado`, 'info', 3000);
+        } else {
+          if (window.confirm('¿Eliminar este entrenamiento del historial?')) {
+            set({
+              workouts: get().workouts.filter((w) => w.id !== workoutId),
+            });
+          }
         }
       },
 
       // ============ LIMPIAR HISTORIAL ============
-      clearHistory: () => {
-        if (window.confirm('¿Eliminar todo el historial de entrenamientos?')) {
+      clearHistory: (showToast?: ToastCallback) => {
+        if (showToast) {
           set({ workouts: [], personalRecords: [] });
+          showToast('Historial eliminado correctamente', 'info', 3000);
+        } else {
+          if (window.confirm('¿Eliminar todo el historial de entrenamientos?')) {
+            set({ workouts: [], personalRecords: [] });
+          }
         }
       },
 
@@ -290,9 +325,7 @@ export const useWorkoutStore = create<WorkoutState>()(
         const workout = workouts.find(w => w.id === workoutId);
         if (!workout) return null;
         
-        // Obtener entrenamientos anteriores para comparar
         const previousWorkouts = workouts.filter(w => w.id !== workoutId);
-        
         return generateWorkoutReport(workout, personalRecords, previousWorkouts);
       },
 
@@ -317,7 +350,6 @@ export const useWorkoutStore = create<WorkoutState>()(
     }),
     {
       name: 'workout-storage',
-      // ✅ Solo persistir workouts y personalRecords (no currentWorkout)
       partialize: (state) => ({
         workouts: state.workouts,
         personalRecords: state.personalRecords,

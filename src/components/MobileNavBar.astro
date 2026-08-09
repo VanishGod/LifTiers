@@ -1,0 +1,50 @@
+---
+// components/MobileNavBar.astro
+import { Home, Dumbbell, BookOpen, User } from 'lucide-react';
+
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { href: '/', label: 'Inicio', icon: Home },
+  { href: '/workout', label: 'Entrenar', icon: Dumbbell },
+  { href: '/exercises', label: 'Ejercicios', icon: Dumbbell },
+  { href: '/knowledges', label: 'Educación', icon: BookOpen },
+];
+---
+
+<!-- ✅ Solo visible en móviles (md:hidden) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 shadow-lg">
+  <div class="flex justify-around items-center h-16 px-2">
+    {navItems.map((item) => {
+      const Icon = item.icon;
+      const isActive = currentPath === item.href;
+      
+      return (
+        <a
+          key={item.href}
+          href={item.href}
+          class={`
+            flex flex-col items-center justify-center gap-0.5
+            px-3 py-1 rounded-lg transition-all duration-200
+            ${isActive 
+              ? 'text-blue-600' 
+              : 'text-gray-500 hover:text-blue-500'
+            }
+          `}
+        >
+          <Icon 
+            size={24} 
+            strokeWidth={isActive ? 2.5 : 2}
+            class="transition-all duration-200"
+          />
+          <span class="text-[10px] font-medium">
+            {item.label}
+          </span>
+          {isActive && (
+            <span class="absolute -top-0.5 w-6 h-0.5 bg-blue-500 rounded-full" />
+          )}
+        </a>
+      );
+    })}
+  </div>
+</nav>
