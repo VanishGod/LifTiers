@@ -1,5 +1,6 @@
 .astro
 .vscode
 node_modules
+public/images
 public/videos
 src/exercises.json
