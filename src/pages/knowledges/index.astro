@@ -1,0 +1,99 @@
+---
+// pages/knowledges/index.astro
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// Obtener todos los artículos de conocimiento
+const articles = await getCollection('knowledge');
+
+// Generar slug manualmente desde el nombre del archivo
+const articlesWithSlug = articles.map((article) => ({
+  ...article,
+  slug: article.id.replace(/\.md$/, ''),
+}));
+
+// Ordenar por fecha (más reciente primero)
+const sortedArticles = articlesWithSlug.sort((a, b) => {
+  const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
+  return dateB - dateA;
+});
+---
+
+<Layout title="📚 Conocimientos - LifTiers">
+  <div class="container mx-auto px-4 py-8">
+    <div class="max-w-5xl mx-auto">
+      <!-- Encabezado -->
+      <header class="mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900">
+          📚 Biblioteca de Conocimientos
+        </h1>
+        <p class="text-gray-500 mt-2 text-lg">
+          Explora artículos sobre entrenamiento, nutrición y bienestar
+        </p>
+        <p class="text-sm text-gray-400 mt-1">
+          {sortedArticles.length} artículos disponibles
+        </p>
+      </header>
+
+      <!-- Lista de artículos -->
+      {sortedArticles.length === 0 ? (
+        <div class="text-center py-16 bg-gray-50 rounded-xl">
+          <p class="text-gray-500 text-lg">No hay artículos disponibles</p>
+          <p class="text-gray-400 text-sm mt-1">
+            Agrega archivos .md en src/content/knowledge/
+          </p>
+        </div>
+      ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sortedArticles.map((article) => (
+            <a
+              href={`/knowledges/${article.slug}`}
+              class="group bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all overflow-hidden flex flex-col"
+            >
+              <!-- Imagen (opcional) -->
+              {article.data.image && (
+                <div class="aspect-video bg-gray-100 overflow-hidden">
+                  <img
+                    src={article.data.image}
+                    alt={article.data.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <!-- Contenido -->
+              <div class="p-5 flex-1 flex flex-col">
+                <div class="flex items-start justify-between gap-2">
+                  <h2 class="text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    {article.data.title}
+                  </h2>
+                  {article.data.category && (
+                    <span class="shrink-0 bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs font-medium">
+                      {article.data.category}
+                    </span>
+                  )}
+                </div>
+                {article.data.description && (
+                  <p class="text-gray-500 text-sm mt-2 line-clamp-2 flex-1">
+                    {article.data.description}
+                  </p>
+                )}
+                <div class="flex items-center gap-3 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-400">
+                  {article.data.author && (
+                    <span>✍️ {article.data.author}</span>
+                  )}
+                  {article.data.date && (
+                    <span>
+                      📅 {new Date(article.data.date).toLocaleDateString('es-ES')}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</Layout>

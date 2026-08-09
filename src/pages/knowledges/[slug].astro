@@ -1,0 +1,37 @@
+---
+// pages/knowledges/[slug].astro
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('knowledge');
+  
+  return articles.map((article) => {
+    const slug = article.id.replace(/\.md$/, '');
+    return {
+      params: { slug },
+      props: { article },
+    };
+  });
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<Layout title={`${article.data.title} | LifTiers`}>
+  <div class="container mx-auto px-4 py-8">
+    <a href="/knowledges" class="text-blue-500 hover:text-blue-700 mb-4 inline-block">
+      ← Volver a conocimientos
+    </a>
+    <article class="max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-4">{article.data.title}</h1>
+      {article.data.description && (
+        <p class="text-gray-600 mb-4">{article.data.description}</p>
+      )}
+      <div class="prose prose-lg">
+        <Content />
+      </div>
+    </article>
+  </div>
+</Layout>
