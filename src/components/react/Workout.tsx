@@ -7,16 +7,27 @@ import exercises from '../../exercises.json';
 import { WorkoutSelector } from './WorkoutSelector';
 import { WorkoutInProgress } from './WorkoutInProgress';
 import { WorkoutHistory } from './WorkoutHistory';
-import { WorkoutReportModal } from './WorkoutReportModal'
+import { WorkoutReportModal } from './WorkoutReportModal';
 import { type WorkoutReport } from '../../types/exercises.types';
 import AlertsToast from './AlertsToast';
 
-export const Workout = () => {
+interface WorkoutProps {
+  onNavigateToRoutines?: () => void; // ✅ Para volver a rutinas
+}
+
+export const Workout = ({ onNavigateToRoutines }: WorkoutProps) => {
   // ============ ESTADOS ============
   const [view, setView] = useState<'selector' | 'in-progress' | 'history'>('selector');
   const [showReport, setShowReport] = useState(false);
   const [currentReport, setCurrentReport] = useState<WorkoutReport | null>(null);
   
+  // ✅ Toast unificado
+  const [toast, setToast] = useState<{
+    message: string;
+    color: 'success' | 'error' | 'warning' | 'info' | 'default';
+    duration?: number;
+  } | null>(null);
+
   // ============ STORES ============
   const {
     workouts,
@@ -38,25 +49,17 @@ export const Workout = () => {
 
   // ============ MANEJADORES ============
 
-  /**
-   * Iniciar entrenamiento libre
-   */
   const handleStartFreeWorkout = (name: string) => {
     createWorkout(name);
     setView('in-progress');
   };
 
-  /**
-   * Iniciar entrenamiento basado en rutina
-   */
   const handleStartRoutineWorkout = (routineId: string) => {
     const routine = routines.find((r) => r.id === routineId);
     if (!routine) return;
 
-    // Crear el entrenamiento con el nombre de la rutina
     createWorkout(`Entrenamiento: ${routine.name}`, routineId, routine.name);
 
-    // Agregar todos los ejercicios de la rutina
     routine.exercises.forEach((exercise: ExerciseInRoutine) => {
       addExerciseToWorkout(
         exercise.exerciseId,
@@ -70,26 +73,21 @@ export const Workout = () => {
     setView('in-progress');
   };
 
-  /**
-   * Agregar ejercicio al entrenamiento actual
-   */
   const handleAddExercise = (exercise: Exercise) => {
     if (!currentWorkout) return;
 
-    // Verificar si ya existe
     const exists = currentWorkout.exercises.some(
       (set) => set.exerciseId === exercise.id
     );
     if (exists) {
-     <AlertsToast
-     message='Este ejercicio ya está en el entrenamiento'
-     duration={3000}
-     color='warning'
-     />
+      setToast({
+        message: 'Este ejercicio ya está en el entrenamiento',
+        color: 'warning',
+        duration: 3000,
+      });
       return;
     }
 
-    // Crear un set por defecto
     const defaultSets = [{
       id: `set-${Date.now()}`,
       repsMin: 8,
@@ -105,27 +103,32 @@ export const Workout = () => {
       'kg',
       defaultSets
     );
+
+    setToast({
+      message: `"${exercise.name}" agregado al entrenamiento`,
+      color: 'success',
+      duration: 2500,
+    });
   };
 
-  /**
-   * Actualizar un set del entrenamiento
-   */
   const handleUpdateSet = (exerciseId: string, setIndex: number, updates: Partial<WorkoutSet>) => {
     updateWorkoutSet(exerciseId, setIndex, updates);
   };
 
-  /**
-   * Eliminar ejercicio del entrenamiento
-   */
   const handleRemoveExercise = (exerciseId: string) => {
     removeExerciseFromWorkout(exerciseId);
+    setToast({
+      message: 'Ejercicio eliminado del entrenamiento',
+      color: 'info',
+      duration: 2000,
+    });
   };
 
-  /**
-   * Completar entrenamiento y mostrar reporte
-   */
   const handleCompleteWorkout = () => {
-    const report = completeWorkout();
+    // ✅ Pasar toast al store para mostrar mensajes
+    const report = completeWorkout((msg, color, duration) => {
+      setToast({ message: msg, color: color || 'success', duration: duration || 3000 });
+    });
     
     if (report) {
       setCurrentReport(report);
@@ -135,46 +138,34 @@ export const Workout = () => {
     setView('selector');
   };
 
-  /**
-   * Cancelar entrenamiento
-   */
   const handleCancelWorkout = () => {
-    cancelWorkout();
+    cancelWorkout((msg, color, duration) => {
+      setToast({ message: msg, color: color || 'info', duration: duration || 2500 });
+    });
     setView('selector');
   };
 
-  /**
-   * Ver historial de entrenamientos
-   */
   const handleViewHistory = () => {
     setView('history');
   };
 
-  /**
-   * Cargar un entrenamiento del historial
-   */
   const handleLoadWorkout = (workoutId: string) => {
     loadWorkout(workoutId);
     setView('in-progress');
   };
 
-  /**
-   * Eliminar entrenamiento del historial
-   */
   const handleDeleteWorkout = (workoutId: string) => {
-    deleteWorkout(workoutId);
+    deleteWorkout(workoutId, (msg, color, duration) => {
+      setToast({ message: msg, color: color || 'info', duration: duration || 3000 });
+    });
   };
 
-  /**
-   * Limpiar todo el historial
-   */
   const handleClearHistory = () => {
-    clearHistory();
+    clearHistory((msg, color, duration) => {
+      setToast({ message: msg, color: color || 'info', duration: duration || 3000 });
+    });
   };
 
-  /**
-   * Ver informe de un entrenamiento del historial
-   */
   const handleViewReport = (workoutId: string) => {
     const report = getWorkoutReport(workoutId);
     if (report) {
@@ -183,9 +174,6 @@ export const Workout = () => {
     }
   };
 
-  /**
-   * Cerrar el modal de informe
-   */
   const handleCloseReport = () => {
     setShowReport(false);
     setCurrentReport(null);
@@ -197,6 +185,16 @@ export const Workout = () => {
     <div className="container mx-auto p-4 max-w-4xl">
       <div className="bg-gray-50 min-h-screen rounded-xl p-4">
         
+        {/* ✅ TOAST UNIFICADO */}
+        {toast && (
+          <AlertsToast
+            message={toast.message}
+            duration={toast.duration || 3000}
+            color={toast.color}
+            onClose={() => setToast(null)}
+          />
+        )}
+
         {/* ===== SELECTOR ===== */}
         {view === 'selector' && (
           <WorkoutSelector

@@ -1,19 +1,21 @@
 ---
 // components/MobileNavBar.astro
-import { Home, Dumbbell, BookOpen, User } from 'lucide-react';
+import { Home, Dumbbell, Zap, Armchair, GraduationCap, Salad } from 'lucide-react';
 
 const currentPath = Astro.url.pathname;
 
 const navItems = [
   { href: '/', label: 'Inicio', icon: Home },
-  { href: '/workout', label: 'Entrenar', icon: Dumbbell },
+  { href: '/routines', label: 'Rutinas', icon: Armchair },
+  { href: '/workout', label: 'Entrenar', icon: Zap },
+  { href: '/foodtracker', label: 'Alimentacion', icon: Salad },
   { href: '/exercises', label: 'Ejercicios', icon: Dumbbell },
-  { href: '/knowledges', label: 'Educación', icon: BookOpen },
+  { href: '/knowledges', label: 'Educación', icon: GraduationCap },
 ];
 ---
 
-<!-- ✅ Solo visible en móviles (md:hidden) -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 shadow-lg">
+<!-- ✅ MobileNavBar -->
+<nav class="mobile-nav fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 shadow-lg md:hidden">
   <div class="flex justify-around items-center h-16 px-2">
     {navItems.map((item) => {
       const Icon = item.icon;
@@ -21,21 +23,21 @@ const navItems = [
       
       return (
         <a
-          key={item.href}
           href={item.href}
           class={`
             flex flex-col items-center justify-center gap-0.5
-            px-3 py-1 rounded-lg transition-all duration-200
+            px-3 py-1 rounded-lg transition-all duration-200 relative
             ${isActive 
               ? 'text-blue-600' 
               : 'text-gray-500 hover:text-blue-500'
             }
           `}
         >
+          {/* ✅ Lucide React usa className */}
           <Icon 
             size={24} 
             strokeWidth={isActive ? 2.5 : 2}
-            class="transition-all duration-200"
+            className="transition-all duration-200"
           />
           <span class="text-[10px] font-medium">
             {item.label}
