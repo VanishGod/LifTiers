@@ -1,8 +1,7 @@
 ---
 // components/NavBar.astro
-import { Home, Dumbbell, Zap, Armchair, GraduationCap, Salad  } from 'lucide-react';
-
-const currentPath = Astro.url.pathname;
+import { Home, Dumbbell, Zap, Armchair, GraduationCap, Salad } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Inicio', icon: Home },
@@ -14,43 +13,69 @@ const navLinks = [
 ];
 ---
 
-<!-- ✅ NavBar Desktop -->
-<nav class="hidden md:block bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-  <div class="container mx-auto px-4">
-    <div class="flex justify-between items-center h-14 md:h-16">
-      
-      <a href="/" class="flex items-center gap-2 text-black font-bold text-lg md:text-xl no-underline hover:text-blue-600 transition-colors">
-        <span class="text-blue-500">💪</span>
-        <span>LifTiers</span>
-      </a>
+<div id="navbar-container">
+  <nav class="hidden md:block bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center h-14 md:h-16">
+        <a href="/" class="flex items-center gap-2 text-black font-bold text-lg md:text-xl no-underline hover:text-blue-600 transition-colors">
+          <span class="text-blue-500">💪</span>
+          <span>LifTiers</span>
+        </a>
 
-      <ul class="flex items-center gap-1 list-none m-0 p-0">
-        {navLinks.map(({ href, label, icon: Icon }) => {
-          const isActive = currentPath === href;
-          
-          return (
-            <li>
-              <a
-                href={href}
-                class={`
-                  flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium no-underline transition-all duration-200
-                  ${isActive
-                    ? 'bg-blue-50 text-blue-600'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
-                  }
-                `}
-              >
-                <Icon 
-                  size={18} 
-                  strokeWidth={isActive ? 2.5 : 2}
-                  className="transition-all duration-200"
-                />
-                {label}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+        <ul class="flex items-center gap-1 list-none m-0 p-0">
+          {navLinks.map(({ href, label, icon: Icon }) => {
+            return (
+              <li>
+                <a
+                  href={href}
+                  data-href={href}
+                  class="nav-link flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium no-underline transition-all duration-200 text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                >
+                  <Icon size={18} strokeWidth={2} className="transition-all duration-200" />
+                  {label}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>
+
+<script>
+  function updateActiveLink() {
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll('.nav-link');
+    
+    links.forEach(link => {
+      const href = link.getAttribute('data-href');
+      const isActive = currentPath === href || 
+                      (href !== '/' && currentPath.startsWith(href));
+      
+      link.classList.remove('bg-blue-50', 'text-blue-600');
+      link.classList.add('text-gray-600');
+      
+      if (isActive) {
+        link.classList.add('bg-blue-50', 'text-blue-600');
+        link.classList.remove('text-gray-600');
+      }
+    });
+  }
+
+  // Actualizar al cargar
+  document.addEventListener('DOMContentLoaded', updateActiveLink);
+  
+  // Actualizar cuando cambie la URL (para SPA)
+  document.addEventListener('astro:page-load', updateActiveLink);
+  
+  // También escuchar cambios en la URL para navegación SPA
+  let lastUrl = location.href;
+  new MutationObserver(() => {
+    const url = location.href;
+    if (url !== lastUrl) {
+      lastUrl = url;
+      updateActiveLink();
+    }
+  }).observe(document, { subtree: true, childList: true });
+</script>
