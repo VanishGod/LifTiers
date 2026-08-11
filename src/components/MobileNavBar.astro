@@ -11,41 +11,48 @@ const navItems = [
 ];
 ---
 
-<!-- ✅ MobileNavBar - SOLO visible en móvil -->
-<nav class="mobile-nav" id="mobile-nav">
-  <div class="flex justify-around items-center h-16 px-2">
-    {navItems.map((item) => {
-      const Icon = item.icon;
-      
-      return (
-        <a
-          key={item.href}
-          href={item.href}
-          data-href={item.href}
-          class="
-            nav-link-mobile
-            flex flex-col items-center justify-center gap-0.5
-            px-3 py-1 rounded-lg transition-all duration-200 relative
-            text-gray-500 hover:text-blue-500
-          "
-        >
-          <Icon 
-            size={24} 
-            strokeWidth={2}
-            class="transition-all duration-200"
-          />
-          <span class="text-[10px] font-medium">
-            {item.label}
-          </span>
-          <span class="absolute -top-0.5 w-6 h-0.5 bg-blue-500 rounded-full transition-all duration-200 mobile-indicator hidden" />
-        </a>
-      );
-    })}
-  </div>
-</nav>
+<div class="mobile-nav-wrapper">
+  <nav class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-container">
+      {navItems.map((item) => {
+        const Icon = item.icon;
+        
+        return (
+          <a
+            key={item.href}
+            href={item.href}
+            data-href={item.href}
+            class="nav-link-mobile"
+          >
+            <Icon 
+              size={24} 
+              strokeWidth={2}
+              class="mobile-icon"
+            />
+            <span class="mobile-label">
+              {item.label}
+            </span>
+            <span class="mobile-indicator" />
+          </a>
+        );
+      })}
+    </div>
+  </nav>
+</div>
 
 <style>
-  /* 🔥 ESTO ES LO IMPORTANTE - Solo visible en móvil */
+  /* Ocultar en desktop */
+  .mobile-nav-wrapper {
+    display: none !important;
+  }
+
+  @media (max-width: 767px) {
+    .mobile-nav-wrapper {
+      display: block !important;
+    }
+  }
+
+  /* Estilos del nav */
   .mobile-nav {
     position: fixed;
     bottom: 0;
@@ -54,40 +61,81 @@ const navItems = [
     background: white;
     border-top: 1px solid #e5e7eb;
     z-index: 50;
-    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
-    
-    /* ✅ Oculto por defecto en desktop */
-    display: none !important;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 0 4px;
   }
 
-  /* ✅ Solo mostrar en pantallas pequeñas (menos de 768px) */
-  @media (max-width: 767px) {
-    .mobile-nav {
-      display: flex !important;
-    }
+  /* Contenedor flex con espacio uniforme */
+  .mobile-nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 64px;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
-  /* ✅ Forzar ocultamiento en desktop (por si acaso) */
-  @media (min-width: 768px) {
-    .mobile-nav {
-      display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
-    }
+  /* Cada enlace - centrado perfecto */
+  .nav-link-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    color: #6b7280;
+    text-decoration: none;
+    position: relative;
+    min-width: 56px;
+    flex: 1;
+    max-width: 80px;
   }
 
-  /* Estilos activos */
+  .nav-link-mobile:hover {
+    color: #3b82f6;
+  }
+
+  /* Icono */
+  .mobile-icon {
+    transition: all 0.2s ease;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  /* Texto */
+  .mobile-label {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+  }
+
+  /* Indicador activo */
+  .mobile-indicator {
+    position: absolute;
+    top: -1px;
+    width: 20px;
+    height: 3px;
+    background-color: #3b82f6;
+    border-radius: 9999px;
+    transition: all 0.2s ease;
+    display: none;
+  }
+
+  /* Estado activo */
   .nav-link-mobile.active {
-    color: #2563eb !important;
+    color: #2563eb;
   }
-  
-  .nav-link-mobile.active .lucide {
+
+  .nav-link-mobile.active .mobile-icon {
     stroke-width: 2.5;
   }
-  
+
   .nav-link-mobile.active .mobile-indicator {
-    display: block !important;
+    display: block;
   }
 </style>
 
