@@ -12,7 +12,7 @@ const navItems = [
 ---
 
 <div class="mobile-nav-wrapper">
-  <nav class="mobile-nav" id="mobile-nav">
+  <nav class="mobile-nav">
     <div class="mobile-nav-container">
       {navItems.map((item) => {
         const Icon = item.icon;
@@ -24,11 +24,7 @@ const navItems = [
             data-href={item.href}
             class="nav-link-mobile"
           >
-            <Icon 
-              size={24} 
-              strokeWidth={2}
-              class="mobile-icon"
-            />
+            <Icon size={24} strokeWidth={2} />
             <span class="mobile-label">
               {item.label}
             </span>
@@ -42,13 +38,9 @@ const navItems = [
 
 <style>
   /* Ocultar en desktop */
-  .mobile-nav-wrapper {
-    display: none !important;
-  }
-
-  @media (max-width: 767px) {
+  @media (min-width: 768px) {
     .mobile-nav-wrapper {
-      display: block !important;
+      display: none !important;
     }
   }
 
@@ -65,17 +57,13 @@ const navItems = [
     padding: 0 4px;
   }
 
-  /* Contenedor flex con espacio uniforme */
   .mobile-nav-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 64px;
-    max-width: 100%;
-    margin: 0 auto;
   }
 
-  /* Cada enlace - centrado perfecto */
   .nav-link-mobile {
     display: flex;
     flex-direction: column;
@@ -83,37 +71,18 @@ const navItems = [
     justify-content: center;
     gap: 2px;
     padding: 4px 12px;
-    border-radius: 8px;
-    transition: all 0.2s ease;
     color: #6b7280;
     text-decoration: none;
-    position: relative;
-    min-width: 56px;
     flex: 1;
-    max-width: 80px;
+    position: relative;
+    transition: color 0.2s ease;
   }
 
-  .nav-link-mobile:hover {
-    color: #3b82f6;
-  }
-
-  /* Icono */
-  .mobile-icon {
-    transition: all 0.2s ease;
-    display: block;
-    flex-shrink: 0;
-  }
-
-  /* Texto */
   .mobile-label {
     font-size: 10px;
     font-weight: 500;
-    line-height: 1.2;
-    text-align: center;
-    display: block;
   }
 
-  /* Indicador activo */
   .mobile-indicator {
     position: absolute;
     top: -1px;
@@ -121,17 +90,12 @@ const navItems = [
     height: 3px;
     background-color: #3b82f6;
     border-radius: 9999px;
-    transition: all 0.2s ease;
     display: none;
   }
 
   /* Estado activo */
   .nav-link-mobile.active {
     color: #2563eb;
-  }
-
-  .nav-link-mobile.active .mobile-icon {
-    stroke-width: 2.5;
   }
 
   .nav-link-mobile.active .mobile-indicator {
