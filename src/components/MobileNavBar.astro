@@ -11,8 +11,8 @@ const navItems = [
 ];
 ---
 
-<!-- ✅ MobileNavBar - Solo visible en móvil -->
-<nav class="mobile-nav fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 shadow-lg md:hidden" id="mobile-nav">
+<!-- ✅ MobileNavBar -->
+<nav class="mobile-nav fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 shadow-lg" id="mobile-nav">
   <div class="flex justify-around items-center h-16 px-2">
     {navItems.map((item) => {
       const Icon = item.icon;
@@ -45,15 +45,22 @@ const navItems = [
 </nav>
 
 <style>
-  /* Asegurar que en desktop esté oculto */
+  /* Ocultar en desktop */
   @media (min-width: 768px) {
     .mobile-nav {
       display: none !important;
     }
   }
 
+  /* Mostrar en móvil */
+  @media (max-width: 767px) {
+    .mobile-nav {
+      display: flex !important;
+    }
+  }
+
   .nav-link-mobile.active {
-    @apply text-blue-600;
+    color: #2563eb !important;
   }
   
   .nav-link-mobile.active .lucide {
@@ -61,7 +68,7 @@ const navItems = [
   }
   
   .nav-link-mobile.active .mobile-indicator {
-    @apply block;
+    display: block !important;
   }
 </style>
 
