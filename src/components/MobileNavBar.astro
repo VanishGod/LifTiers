@@ -11,8 +11,8 @@ const navItems = [
 ];
 ---
 
-<!-- ✅ MobileNavBar -->
-<nav class="mobile-nav fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 shadow-lg" id="mobile-nav">
+<!-- ✅ MobileNavBar - SOLO visible en móvil -->
+<nav class="mobile-nav" id="mobile-nav">
   <div class="flex justify-around items-center h-16 px-2">
     {navItems.map((item) => {
       const Icon = item.icon;
@@ -45,20 +45,39 @@ const navItems = [
 </nav>
 
 <style>
-  /* Ocultar en desktop */
-  @media (min-width: 768px) {
-    .mobile-nav {
-      display: none !important;
-    }
+  /* 🔥 ESTO ES LO IMPORTANTE - Solo visible en móvil */
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    z-index: 50;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+    
+    /* ✅ Oculto por defecto en desktop */
+    display: none !important;
   }
 
-  /* Mostrar en móvil */
+  /* ✅ Solo mostrar en pantallas pequeñas (menos de 768px) */
   @media (max-width: 767px) {
     .mobile-nav {
       display: flex !important;
     }
   }
 
+  /* ✅ Forzar ocultamiento en desktop (por si acaso) */
+  @media (min-width: 768px) {
+    .mobile-nav {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  /* Estilos activos */
   .nav-link-mobile.active {
     color: #2563eb !important;
   }
