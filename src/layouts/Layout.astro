@@ -1,8 +1,8 @@
 ---
-// layouts/Layout.astro
 import '../styles/global.css';
 import NavBarAstroComponent from '@/components/NavBar.astro';
 import MobileNavBar from '@/components/MobileNavBar.astro';
+import { ClientRouter } from 'astro:transitions/client';
 ---
 
 <!doctype html>
@@ -16,7 +16,9 @@ import MobileNavBar from '@/components/MobileNavBar.astro';
 		<title>LifTiers</title>
 	</head>
 	<body>
-		<!-- NavBar Desktop (oculto en móvil) -->
+		<ClientRouter />
+
+		<!-- NavBar Desktop -->
 		<NavBarAstroComponent />
 
 		<!-- Contenido principal -->
@@ -24,29 +26,25 @@ import MobileNavBar from '@/components/MobileNavBar.astro';
 			<slot />
 		</main>
 
-		<!-- MobileNavBar (solo visible en móvil) -->
+		<!-- MobileNavBar -->
 		<MobileNavBar />
 
-		<!-- Script para manejar el padding según el navbar visible -->
 		<script>
-			// Ajustar el padding del main según la barra de navegación visible
+			// Ajustar padding según el navbar visible
 			const main = document.querySelector('main');
-			const mobileNav = document.querySelector('.mobile-nav');
 			
 			function adjustMainPadding() {
 				if (main) {
 					if (window.innerWidth < 768) {
-						// Móvil: padding inferior para el MobileNavBar
 						main.style.paddingBottom = '70px';
+						main.style.paddingTop = '0';
 					} else {
-						// Desktop: padding superior para el NavBar
 						main.style.paddingTop = '70px';
 						main.style.paddingBottom = '0';
 					}
 				}
 			}
 
-			// Ejecutar al cargar y al redimensionar
 			adjustMainPadding();
 			window.addEventListener('resize', adjustMainPadding);
 		</script>
@@ -54,51 +52,15 @@ import MobileNavBar from '@/components/MobileNavBar.astro';
 </html>
 
 <style is:global>
-	html,
-	body {
+	html, body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
 		overflow-x: hidden;
 	}
 
-	/* Ajuste para que el contenido no quede detrás de los navbars */
 	main {
 		min-height: 100vh;
 		transition: padding 0.3s ease;
-	}
-
-	/* Desktop NavBar - oculto en móvil */
-	nav:first-of-type {
-		display: block;
-	}
-
-	/* MobileNavBar - oculto en desktop */
-	.mobile-nav {
-		display: none;
-	}
-
-	@media (max-width: 767px) {
-		/* Desktop NavBar - oculto en móvil */
-		nav:first-of-type {
-			display: none !important;
-		}
-
-		/* MobileNavBar - visible en móvil */
-		.mobile-nav {
-			display: block !important;
-		}
-	}
-
-	@media (min-width: 768px) {
-		/* Desktop NavBar - visible en desktop */
-		nav:first-of-type {
-			display: block !important;
-		}
-
-		/* MobileNavBar - oculto en desktop */
-		.mobile-nav {
-			display: none !important;
-		}
 	}
 </style>
