@@ -1,8 +1,8 @@
 ---
+// src/layouts/Layout.astro
 import '../styles/global.css';
 import NavBarAstroComponent from '@/components/NavBar.astro';
 import MobileNavBar from '@/components/MobileNavBar.astro';
-import { ClientRouter } from 'astro:transitions/client';
 ---
 
 <!doctype html>
@@ -16,9 +16,7 @@ import { ClientRouter } from 'astro:transitions/client';
 		<title>LifTiers</title>
 	</head>
 	<body>
-		<ClientRouter />
-
-		<!-- NavBar Desktop -->
+		<!-- NavBar Desktop (oculto en móvil) -->
 		<NavBarAstroComponent />
 
 		<!-- Contenido principal -->
@@ -26,11 +24,11 @@ import { ClientRouter } from 'astro:transitions/client';
 			<slot />
 		</main>
 
-		<!-- MobileNavBar -->
+		<!-- MobileNavBar (solo visible en móvil) -->
 		<MobileNavBar />
 
+		<!-- Script para manejar el padding según el navbar visible -->
 		<script>
-			// Ajustar padding según el navbar visible
 			const main = document.querySelector('main');
 			
 			function adjustMainPadding() {
