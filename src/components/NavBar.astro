@@ -1,6 +1,6 @@
 ---
+// components/NavBar.astro
 import { Home, Dumbbell, Zap, Armchair, GraduationCap, Salad } from 'lucide-react';
-import { useState, useEffect } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Inicio', icon: Home },
@@ -12,35 +12,33 @@ const navLinks = [
 ];
 ---
 
-<div id="navbar-container">
-  <nav class="hidden md:block bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center h-14 md:h-16">
-        <a href="/" class="flex items-center gap-2 text-black font-bold text-lg md:text-xl no-underline hover:text-blue-600 transition-colors">
-          <span class="text-blue-500">💪</span>
-          <span>LifTiers</span>
-        </a>
+<nav class="desktop-nav hidden md:block bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center h-14 md:h-16">
+      <a href="/" class="flex items-center gap-2 text-black font-bold text-lg md:text-xl no-underline hover:text-blue-600 transition-colors">
+        <span class="text-blue-500">💪</span>
+        <span>LifTiers</span>
+      </a>
 
-        <ul class="flex items-center gap-1 list-none m-0 p-0">
-          {navLinks.map(({ href, label, icon: Icon }) => {
-            return (
-              <li>
-                <a
-                  href={href}
-                  data-href={href}
-                  class="nav-link flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium no-underline transition-all duration-200 text-gray-600 hover:text-blue-600 hover:bg-gray-50"
-                >
-                  <Icon size={18} strokeWidth={2} className="transition-all duration-200" />
-                  {label}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <ul class="flex items-center gap-1 list-none m-0 p-0">
+        {navLinks.map(({ href, label, icon: Icon }) => {
+          return (
+            <li>
+              <a
+                href={href}
+                data-href={href}
+                class="nav-link flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium no-underline transition-all duration-200 text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+              >
+                <Icon size={18} strokeWidth={2} className="transition-all duration-200" />
+                {label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>
 
 <script>
   function updateActiveLink() {
@@ -52,6 +50,7 @@ const navLinks = [
       const isActive = currentPath === href || 
                       (href !== '/' && currentPath.startsWith(href));
       
+      // Resetear clases
       link.classList.remove('bg-blue-50', 'text-blue-600');
       link.classList.add('text-gray-600');
       
@@ -62,13 +61,12 @@ const navLinks = [
     });
   }
 
-  // Actualizar al cargar
+  // Ejecutar en diferentes momentos
   document.addEventListener('DOMContentLoaded', updateActiveLink);
-  
-  // Actualizar cuando cambie la URL (para SPA)
   document.addEventListener('astro:page-load', updateActiveLink);
+  document.addEventListener('astro:after-swap', updateActiveLink);
   
-  // También escuchar cambios en la URL para navegación SPA
+  // Fallback: observer para cambios de URL
   let lastUrl = location.href;
   new MutationObserver(() => {
     const url = location.href;
