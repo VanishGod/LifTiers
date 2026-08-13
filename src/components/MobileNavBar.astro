@@ -1,4 +1,5 @@
 ---
+// components/MobileNavBar.astro
 import { Home, Dumbbell, Zap, Armchair, GraduationCap, Salad } from 'lucide-react';
 
 const navItems = [
@@ -11,9 +12,9 @@ const navItems = [
 ];
 ---
 
-<div class="mobile-nav-wrapper">
-  <nav class="mobile-nav">
-    <div class="mobile-nav-container">
+<div class="mobile-nav-wrapper md:hidden fixed bottom-0 left-0 right-0 z-50">
+  <nav class="bg-white border-t border-gray-200 shadow-lg">
+    <div class="flex justify-around items-center h-16 px-2">
       {navItems.map((item) => {
         const Icon = item.icon;
         
@@ -22,13 +23,11 @@ const navItems = [
             key={item.href}
             href={item.href}
             data-href={item.href}
-            class="nav-link-mobile"
+            class="mobile-nav-link flex flex-col items-center justify-center gap-0.5 px-2 py-1 text-gray-500 hover:text-blue-500 transition-colors relative"
           >
-            <Icon size={24} strokeWidth={2} />
-            <span class="mobile-label">
-              {item.label}
-            </span>
-            <span class="mobile-indicator" />
+            <Icon size={24} strokeWidth={2} className="transition-all duration-200" />
+            <span class="text-[10px] font-medium">{item.label}</span>
+            <span class="mobile-indicator absolute -top-0.5 w-5 h-0.5 bg-blue-500 rounded-full opacity-0 transition-opacity" />
           </a>
         );
       })}
@@ -37,81 +36,19 @@ const navItems = [
 </div>
 
 <style>
-  /* IMPORTANTE: Mostrar por defecto en móvil */
-  .mobile-nav-wrapper {
-    display: block;
-  }
-
-  /* Ocultar en desktop */
-  @media (min-width: 768px) {
-    .mobile-nav-wrapper {
-      display: none !important;
-    }
-  }
-
-  /* Estilos del nav */
-  .mobile-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    border-top: 1px solid #e5e7eb;
-    z-index: 50;
-    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
-    padding: 0 4px;
-  }
-
-  .mobile-nav-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 64px;
-  }
-
-  .nav-link-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    padding: 4px 12px;
-    color: #6b7280;
-    text-decoration: none;
-    flex: 1;
-    position: relative;
-    transition: color 0.2s ease;
-  }
-
-  .mobile-label {
-    font-size: 10px;
-    font-weight: 500;
-  }
-
-  .mobile-indicator {
-    position: absolute;
-    top: -1px;
-    width: 20px;
-    height: 3px;
-    background-color: #3b82f6;
-    border-radius: 9999px;
-    display: none;
-  }
-
-  /* Estado activo */
-  .nav-link-mobile.active {
+  .mobile-nav-link.active {
     color: #2563eb;
   }
-
-  .nav-link-mobile.active .mobile-indicator {
-    display: block;
+  
+  .mobile-nav-link.active .mobile-indicator {
+    opacity: 1;
   }
 </style>
 
 <script>
   function updateActiveMobileLink() {
     const currentPath = window.location.pathname;
-    const links = document.querySelectorAll('.nav-link-mobile');
+    const links = document.querySelectorAll('.mobile-nav-link');
     
     links.forEach(link => {
       const href = link.getAttribute('data-href');
@@ -122,7 +59,18 @@ const navItems = [
     });
   }
 
+  // Ejecutar en diferentes momentos
   document.addEventListener('DOMContentLoaded', updateActiveMobileLink);
   document.addEventListener('astro:page-load', updateActiveMobileLink);
   document.addEventListener('astro:after-swap', updateActiveMobileLink);
+  
+  // Fallback para cambios de URL
+  let lastUrl = location.href;
+  new MutationObserver(() => {
+    const url = location.href;
+    if (url !== lastUrl) {
+      lastUrl = url;
+      updateActiveMobileLink();
+    }
+  }).observe(document, { subtree: true, childList: true });
 </script>
